@@ -10,7 +10,7 @@ There are general utilities used across days in `aoc2020.util`.
 
 See the "scaffolding" in `aoc2020.core` that allows us to run each day's script, for example:
 
-    lein run day1
+    lein run day1 arg0 arg1 arg2
 
 ## Resources
 
