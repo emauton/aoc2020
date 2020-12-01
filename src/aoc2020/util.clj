@@ -7,8 +7,9 @@
   [filename]
   (->  filename io/resource slurp))
 
-(defn line-resource [filename]
+(defn line-resource 
   "Read line-by-line from a file in project root's resources/"
+  [filename]
   (-> filename io/resource io/reader line-seq))
 
 (defn read-numbers [filename]
