@@ -10,7 +10,7 @@
     (first (filter test-sum combs))))
 
 (defn repair-expense-report
-  "Return the product of two elements of nums that sum to 2020"
+  "Return the product of n elements of nums that sum to 2020"
   [n nums]
   (let [indices (indices-adding-to n nums 2020)]
     (apply * (map #(nth nums %) indices))))
