@@ -16,8 +16,10 @@
     (* (nth nums a) (nth nums b))))
 
 (defn main
-  "Day 1 of Advent of Code 2020: Report Repair"
-  [args]
-  (println (->> (util/read-numbers "mags/input-1-1")
-                (repair-expense-report))) )
+  "Day 1 of Advent of Code 2020: Report Repair
+      lein run day1 <input>
+   where <input> is a filename in project resources/"
+  [[filename]]
+  (println (->> (util/read-numbers filename)
+                (repair-expense-report))))
 
