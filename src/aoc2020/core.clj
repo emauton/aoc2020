@@ -1,6 +1,7 @@
 (ns aoc2020.core
   (:require aoc2020.day1 
             aoc2020.day2
+            aoc2020.day3
             clojure.string)
   (:gen-class))
 
