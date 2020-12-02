@@ -17,13 +17,15 @@
 (defn valid-tobbogan-rental?
   "Check if password matches policy of the toboggan company"
   [line]
-  (let [[a b ch pwd] (parse-line line)]
-    (println "that ch is in either position a or b of pwd, but not both")))
+  (let [[a b ch pwd] (parse-line line)
+        ath (nth pwd (dec a))
+        bth (nth pwd (dec b))]
+    (and (not= ath bth) (or (= ath ch) (= bth ch)))))
 
 (defn count-valid
   "Count the valid passwords in lines"
   [lines]
-  (count (filter valid-sled-rental? lines)))
+  (count (filter valid-tobbogan-rental? lines)))
 
 (defn main
   "Day 2 of Advent of Code 2020: Password Philosophy
