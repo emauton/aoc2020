@@ -4,20 +4,26 @@
 (defn parse-line
   "Parse a line of the form d-d c: string"
   [line]
-  (let [[_ min max ch pwd] (re-matches #"(\d+)-(\d+) ([a-z]): (\w+)" line)]
-    [(Integer/parseInt min) (Integer/parseInt max) (char (first (seq ch))) pwd]))
+  (let [[_ a b ch pwd] (re-matches #"(\d+)-(\d+) ([a-z]): (\w+)" line)]
+    [(Integer/parseInt a) (Integer/parseInt b) (char (first (seq ch))) pwd]))
 
-(defn valid? 
-  "Check if password matches policy"
+(defn valid-sled-rental?
+  "Check if password matches policy of the old sled rental place"
   [line]
-  (let [[min max ch pwd] (parse-line line)
-        num (count (filter #(= % ch) (seq pwd)))]
-    (<= min num max)))
+  (let [[a b ch pwd] (parse-line line)
+        n (count (filter #(= % ch) (seq pwd)))]
+    (<= a n b)))
+
+(defn valid-tobbogan-rental?
+  "Check if password matches policy of the toboggan company"
+  [line]
+  (let [[a b ch pwd] (parse-line line)]
+    (println "that ch is in either position a or b of pwd, but not both")))
 
 (defn count-valid
   "Count the valid passwords in lines"
   [lines]
-  (count (filter valid? lines)))
+  (count (filter valid-sled-rental? lines)))
 
 (defn main
   "Day 2 of Advent of Code 2020: Password Philosophy
