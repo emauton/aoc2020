@@ -5,7 +5,7 @@
   "Parse a line of the form d-d c: string"
   [line]
   (let [[_ a b ch pwd] (re-matches #"(\d+)-(\d+) ([a-z]): (\w+)" line)]
-    [(Integer/parseInt a) (Integer/parseInt b) (char (first (seq ch))) pwd]))
+    [(Integer/parseInt a) (Integer/parseInt b) (first ch) pwd]))
 
 (defn valid-sled-rental?
   "Check if password matches policy of the old sled rental place"
