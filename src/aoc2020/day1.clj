@@ -4,15 +4,15 @@
 
 (defn indices-adding-to 
   "Find the indices of n elements of nums that sum to target"
-  [nums n target]
+  [n nums target]
   (let [combs (c/combinations (range (count nums)) n)
         test-sum (fn [indices] (= (apply + (map #(nth nums %) indices)) target))]
     (first (filter test-sum combs))))
 
 (defn repair-expense-report
-  "Return the product of two elements of nums that sum to 2020"
+  "Return the product of n elements of nums that sum to 2020"
   [n nums]
-  (let [indices (indices-adding-to nums n 2020)]
+  (let [indices (indices-adding-to n nums 2020)]
     (apply * (map #(nth nums %) indices))))
 
 (defn main
@@ -22,4 +22,3 @@
   [[filename n]]
   (println (->> (util/read-numbers filename)
                 (repair-expense-report (Integer/parseInt n)))))
-
