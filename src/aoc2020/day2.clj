@@ -14,7 +14,7 @@
         n (count (filter #(= % ch) (seq pwd)))]
     (<= a n b)))
 
-(defn valid-tobbogan-rental?
+(defn valid-toboggan-rental?
   "Check if password matches policy of the toboggan company"
   [line]
   (let [[a b ch pwd] (parse-line line)
@@ -22,15 +22,16 @@
         bth (nth pwd (dec b))]
     (and (not= ath bth) (or (= ath ch) (= bth ch)))))
 
-(defn count-valid
-  "Count the valid passwords in lines"
-  [lines]
-  (count (filter valid-tobbogan-rental? lines)))
-
 (defn main
   "Day 2 of Advent of Code 2020: Password Philosophy
       lein run day2 <input>
   where <input> is a filename in project resources/"
   [[filename]]
-  (println (->> (util/read-lines filename)
-                (count-valid))))
+  (println "valid by sled policy:"
+           (->> (util/read-lines filename)
+                (filter valid-sled-rental?)
+                (count)))
+  (println "valid by toboggan policy:"
+           (->> (util/read-lines filename)
+                (filter valid-toboggan-rental?)
+                (count))))
