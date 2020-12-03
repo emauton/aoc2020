@@ -12,18 +12,22 @@
   (mapv tree-line lines))
 
 (defn make-coords
-  "Create a sequence of the coordinates in the map that should be checked for trees"
-  [tree-map drow dcol]
+  "Get coordinates in tree-map that should be checked for trees along deltas drow,dcol path"
+  [tree-map [drow dcol]]
   (let [height (count tree-map)
         width (count (first tree-map)) 
         rows (range 0 height drow)
-        cols (map #(mod % width) (take (count rows) (iterate (partial + dcol) 0) ))]
+        cols (->> (iterate (partial + dcol) 0)
+                  (take (count rows))
+                  (map #(mod % width)))]
     (map vector rows cols)))
 
 (defn count-trees
-  "Count trees encountered in tree-map at angle described by dcol, drow"
-  [tree-map [drow dcol]]
-  (count (filter #(get-in tree-map %) (make-coords tree-map drow dcol))))
+  "Count trees encountered in tree-map at angle described by deltas"
+  [tree-map deltas]
+  (->> (make-coords tree-map deltas)
+       (filter #(get-in tree-map %))
+       (count)))
 
 (defn test-slopes
   "Return the product of the numbers of trees hit when taking the slopes"
@@ -35,5 +39,6 @@
       lein run day3 <input>
   where <input> is a filename in project resources/"
   [[filename]]
-  (let [slopes [[1,1] [1,3] [1,5] [1,7] [2,1]]]
-    (println (test-slopes (make-map (util/read-lines filename)) slopes))))
+  (let [slopes [[1,1] [1,3] [1,5] [1,7] [2,1]]
+        tree-map (make-map (util/read-lines filename))]
+    (println (test-slopes tree-map slopes))))
