@@ -41,4 +41,5 @@
   [[filename]]
   (let [slopes [[1,1] [1,3] [1,5] [1,7] [2,1]]
         tree-map (make-map (util/read-lines filename))]
-    (println (test-slopes tree-map slopes))))
+    (println "Part 1:" (count-trees tree-map [1,3]))
+    (println "Part 2:" (test-slopes tree-map slopes))))
