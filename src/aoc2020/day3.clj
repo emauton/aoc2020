@@ -22,16 +22,16 @@
 
 (defn count-trees
   "Count trees encountered in tree-map at angle described by dcol, drow"
-  [tree-map drow dcol]
+  [tree-map [drow dcol]]
   (count (filter #(get-in tree-map %) (make-coords tree-map drow dcol))))
 
 (defn test-slopes
   "Return the product of the numbers of trees hit when taking the slopes"
   [tree-map slopes]
-  (apply * (map #(count-trees tree-map (first %) (second %)) slopes)))
+  (apply * (map #(count-trees tree-map %) slopes)))
 
 (defn main
-  "Day 3 of Advent of Code 2020: 
+  "Day 3 of Advent of Code 2020: Toboggan Trajectory
       lein run day3 <input>
   where <input> is a filename in project resources/"
   [[filename]]
