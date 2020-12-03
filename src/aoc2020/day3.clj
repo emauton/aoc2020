@@ -25,9 +25,15 @@
   [tree-map drow dcol]
   (count (filter #(get-in tree-map %) (make-coords tree-map drow dcol))))
 
+(defn test-slopes
+  "Return the product of the numbers of trees hit when taking the slopes"
+  [tree-map slopes]
+  (apply * (map #(count-trees tree-map (first %) (second %)) slopes)))
+
 (defn main
   "Day 3 of Advent of Code 2020: 
       lein run day3 <input>
   where <input> is a filename in project resources/"
   [[filename]]
-  (println (count-trees (make-map (util/read-lines filename)) 1 3)))
+  (let [slopes [[1,1] [1,3] [1,5] [1,7] [2,1]]]
+    (println (test-slopes (make-map (util/read-lines filename)) slopes))))
