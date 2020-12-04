@@ -14,7 +14,7 @@
         passports (s/split input #"\n\n")]
     (map parse-passport passports)))
 
-(defn valid?
+(defn all-keys-present?
   "Return true if passport is 'valid'
     byr (Birth Year)
     iyr (Issue Year)
@@ -27,13 +27,28 @@
   [passport]
   (every? #(contains? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
-(defn validyear?
-  "Return true if year is a four digit number between min and max (inclusive)"
-)
+(def checks-map {"byr" (fn [value] (constantly true))
+                 "iyr" (fn [value] (constantly true))
+                 "eyr" (fn [value] (constantly true))
+                 "hgt" (fn [value] (constantly true))
+                 "hcl" (fn [value] (constantly true))
+                 "ecl" (fn [value] (constantly true))
+                 "pid" (fn [value] (constantly true))
+                 "cid" (fn [value] (constantly true))})
+
+(defn key-valid?
+  [passport k]
+  (and (contains? passport k) ((get checks-map k) (get passport k))))
+
+(defn all-keys-valid?
+  "Return true if passport is 'valid' including extra checks on each value"
+  [passport]
+  (every? #(key-valid? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
 (defn main
   "Day 4 of Advent of Code 2020: 
       lein run day4 <input>
   where <input> is a filename in project resources/"
   [[filename]]
-  (println "Number of valid passports:" (count (filter valid? (split-passports filename)))))
+  (println "All keys present:" (count (filter all-keys-present? (split-passports filename))))
+  (println "All keys valid:" (count (filter all-keys-valid? (split-passports filename)))))
