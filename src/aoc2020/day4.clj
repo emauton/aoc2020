@@ -32,6 +32,17 @@
   [year min max]
   (and (not= nil (re-matches #"(\d+)" year)) (<= min (Integer/parseInt year) max) ))
 
+(defn validhgt?
+  "Return true is hgt is a number followed by cm or in and 
+      if cm   150 <= hgt <= 193
+      if in   59 <= hgt <= 76 "
+  [hgt]
+  (let [])
+  (or (s/ends-with? hgt "cm") 
+      (s/ends-with? hgt "in")
+      )
+       ())
+
 (defn main
   "Day 4 of Advent of Code 2020: 
       lein run day4 <input>
