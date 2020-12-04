@@ -2,6 +2,7 @@
   (:require aoc2020.day1 
             aoc2020.day2
             aoc2020.day3
+            aoc2020.day4
             clojure.string)
   (:gen-class))
 
