@@ -3,39 +3,28 @@
             [clojure.string :as s] ))
 
 (defn parse-passport
-  "Return a map of the key:value pairs in the input string"
+  "Return a map of the key:value pairs in the input"
   [input]
   (apply hash-map (s/split input #"[ :\n]+")))
 
 (defn split-passports
-  "Take output of slurp-resource and split into a sequence of passports"
+  "Split input file into a sequence of passports"
   [filename]
-  (let [input (util/slurp-resource filename)
-        passports (s/split input #"\n\n")]
-    (map parse-passport passports)))
+  (->> (s/split (util/slurp-resource filename) #"\n\n")
+       (map parse-passport)))
 
-(defn all-keys-present?
-  "Return true if passport is 'valid'
-    byr (Birth Year)
-    iyr (Issue Year)
-    eyr (Expiration Year)
-    hgt (Height)
-    hcl (Hair Color)
-    ecl (Eye Color)
-    pid (Passport ID)
-    cid (Country ID) (skipped for nefarious purposes)"
-  [passport]
-  (every? #(contains? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
+(def not-nil? (complement nil?))
 
 (defn validyear?
   "Return true if year is a number between min and max (inclusive)"
   [year min max]
-  (and (not= nil (re-matches #"(\d+)" year)) (<= min (Integer/parseInt year) max) ))
+  (and (not-nil? (re-matches #"(\d+)" year))
+       (<= min (Integer/parseInt year) max)))
 
 (defn validhgt?
   "Return true is hgt is a number followed by cm or in and 
-      if cm   150 <= hgt <= 193
-      if in   59 <= hgt <= 76 "
+     if cm   150 <= hgt <= 193
+     if in   59 <= hgt <= 76"
   [hgt]
   (let [[_ n unit] (re-matches #"(\d+)(\w+)" hgt)]
     (cond
@@ -48,7 +37,7 @@
 (defn validhcl?
   "Return true if hcl is a '#' followed by 6 hex digits"
   [hcl]
-  (not= nil (re-matches #"#[0-9a-f]{6}" hcl)))
+  (not-nil? (re-matches #"#[0-9a-f]{6}" hcl)))
 
 (defn validecl?
   "Return true if ecl is our list of eye colours"
@@ -58,7 +47,7 @@
 (defn validpid?
   "Return true if pid is a nine-digit number"
   [pid]
-  (not= nil (re-matches #"[0-9]{9}" pid)))
+  (not-nil? (re-matches #"[0-9]{9}" pid)))
 
 (def checks-map {"byr" #(validyear? % 1920 2002)
                  "iyr" #(validyear? % 2010 2020)
@@ -70,13 +59,21 @@
                  "cid" (fn [_] (constantly true))})
 
 (defn key-valid?
+  "Test whether the value for key k in passport is valid
+   Dispatches over checks-map above for each key"
   [passport k]
-  (and (contains? passport k) ((get checks-map k) (get passport k))))
+  (and (contains? passport k)
+       ((get checks-map k) (get passport k))))
 
 (defn all-keys-valid?
   "Return true if passport is 'valid' including extra checks on each value"
   [passport]
   (every? #(key-valid? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
+
+(defn all-keys-present?
+  "Return true if passport is 'valid' i.e. has all keys except cid"
+  [passport]
+  (every? #(contains? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
 (defn main
   "Day 4 of Advent of Code 2020: 
