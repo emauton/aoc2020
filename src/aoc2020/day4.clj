@@ -67,7 +67,7 @@
                  "hcl" #(validhcl? %)
                  "ecl" #(validecl? %)
                  "pid" #(validpid? %)
-                 "cid" (fn [value] (constantly true))})
+                 "cid" (fn [_] (constantly true))})
 
 (defn key-valid?
   [passport k]
