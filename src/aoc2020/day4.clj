@@ -27,24 +27,6 @@
   [passport]
   (every? #(contains? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
-(def checks-map {"byr" (fn [value] (constantly true))
-                 "iyr" (fn [value] (constantly true))
-                 "eyr" (fn [value] (constantly true))
-                 "hgt" (fn [value] (constantly true))
-                 "hcl" (fn [value] (constantly true))
-                 "ecl" (fn [value] (constantly true))
-                 "pid" (fn [value] (constantly true))
-                 "cid" (fn [value] (constantly true))})
-
-(defn key-valid?
-  [passport k]
-  (and (contains? passport k) ((get checks-map k) (get passport k))))
-
-(defn all-keys-valid?
-  "Return true if passport is 'valid' including extra checks on each value"
-  [passport]
-  (every? #(key-valid? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
-
 (defn validyear?
   "Return true if year is a number between min and max (inclusive)"
   [year min max]
@@ -55,11 +37,46 @@
       if cm   150 <= hgt <= 193
       if in   59 <= hgt <= 76 "
   [hgt]
-  (let [])
-  (or (s/ends-with? hgt "cm") 
-      (s/ends-with? hgt "in")
-      )
-       ())
+  (let [[_ n unit] (re-matches #"(\d+)(\w+)" hgt)]
+    (cond
+      (or (nil? n) (nil? unit)) false
+      (= unit "cm") (<= 150 (Integer/parseInt n) 193)
+      (= unit "in") (<= 59 (Integer/parseInt n) 76)
+      :else false
+    )))
+
+(defn validhcl?
+  "Return true if hcl is a '#' followed by 6 hex digits"
+  [hcl]
+  (not= nil (re-matches #"#[0-9a-f]{6}" hcl)))
+
+(defn validecl?
+  "Return true if ecl is our list of eye colours"
+  [ecl]
+  (some #(= ecl %) ["amb" "blu" "brn" "gry" "grn" "hzl" "oth"]))
+
+(defn validpid?
+  "Return true if pid is a nine-digit number"
+  [pid]
+  (not= nil (re-matches #"[0-9]{9}" pid)))
+
+(def checks-map {"byr" #(validyear? % 1920 2002)
+                 "iyr" #(validyear? % 2010 2020)
+                 "eyr" #(validyear? % 2020 2030)
+                 "hgt" #(validhgt? %)
+                 "hcl" #(validhcl? %)
+                 "ecl" #(validecl? %)
+                 "pid" #(validpid? %)
+                 "cid" (fn [value] (constantly true))})
+
+(defn key-valid?
+  [passport k]
+  (and (contains? passport k) ((get checks-map k) (get passport k))))
+
+(defn all-keys-valid?
+  "Return true if passport is 'valid' including extra checks on each value"
+  [passport]
+  (every? #(key-valid? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
 (defn main
   "Day 4 of Advent of Code 2020: 
