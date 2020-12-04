@@ -75,7 +75,7 @@
   (every? #(contains? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
 (defn main
-  "Day 4 of Advent of Code 2020: 
+  "Day 4 of Advent of Code 2020: Passport Processing
       lein run day4 <input>
   where <input> is a filename in project resources/"
   [[filename]]
