@@ -31,8 +31,7 @@
       (or (nil? n) (nil? unit)) false
       (= unit "cm") (<= 150 (Integer/parseInt n) 193)
       (= unit "in") (<= 59 (Integer/parseInt n) 76)
-      :else false
-    )))
+      :else false)))
 
 (defn validhcl?
   "Return true if hcl is a '#' followed by 6 hex digits"
