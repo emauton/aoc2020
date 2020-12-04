@@ -45,6 +45,11 @@
   [passport]
   (every? #(key-valid? passport %) ["byr" "iyr" "eyr" "hgt" "hcl" "ecl" "pid"]))
 
+(defn validyear?
+  "Return true if year is a number between min and max (inclusive)"
+  [year min max]
+  (and (not= nil (re-matches #"(\d+)" year)) (<= min (Integer/parseInt year) max) ))
+
 (defn main
   "Day 4 of Advent of Code 2020: 
       lein run day4 <input>
