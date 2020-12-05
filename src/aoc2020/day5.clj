@@ -1,6 +1,5 @@
 (ns aoc2020.day5
-  (:require [aoc2020.util :as util] 
-            [clojure.string :as s]))
+  (:require [aoc2020.util :as util])
 
 (defn get-row
   "Takes a string representation of a binary number in F (0) B (1) and returns an int"
