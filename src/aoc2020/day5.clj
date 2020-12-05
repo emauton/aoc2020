@@ -1,23 +1,18 @@
 (ns aoc2020.day5
   (:require [aoc2020.util :as util]))
 
-(defn get-row
+(defn get-num
   "Takes a string representation of a binary number in F (0) B (1) and returns an int"
-  [row-str]
-  (Integer/parseInt (apply str (map {\F \0 \B \1} row-str)) 2))
-
-(defn get-col
-  "Takes a string representation of a binary number in L (0) R (1) and returns an int"
-  [col-str]
-  (Integer/parseInt (apply str (map {\R \1 \L \0} col-str)) 2))
+  [s]
+  (Integer/parseInt (apply str (map {\F \0 \L \0 \B \1 \R \1} s)) 2))
 
 (defn parse-pass
   "Get a boarding pass ID from the input line
    F is front half, B is back half R is right, L is left
    eg FBFBBFFRLR gives row 44, column 5"
   [line]
-  (let [row (get-row (subs line 0 7))
-        col (get-col (subs line 7 10))]
+  (let [row (get-num (subs line 0 7))
+        col (get-num (subs line 7 10))]
     (+ (* row 8) col)))
 
 (defn highest-id
