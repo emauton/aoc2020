@@ -28,7 +28,12 @@
 
 (defn empty-seat
   "Find the id not present in passes but for which id + 1 and id -1 are both present"
-  [passes])
+  [passes]
+  (reduce (fn [a b]
+            (if (= (inc a) b)
+              b
+              (reduced (inc a))))
+          (sort (map last passes))))
 
 (defn main
   "Day 5 of Advent of Code 2020: Binary Boarding  
