@@ -1,5 +1,5 @@
 (ns aoc2020.day5
-  (:require [aoc2020.util :as util])
+  (:require [aoc2020.util :as util]))
 
 (defn get-row
   "Takes a string representation of a binary number in F (0) B (1) and returns an int"
@@ -26,6 +26,10 @@
   [passes]
   (last (last (sort-by last passes))))
 
+(defn empty-seat
+  "Find the id not present in passes but for which id + 1 and id -1 are both present"
+  [passes])
+
 (defn main
   "Day 5 of Advent of Code 2020: Binary Boarding  
       lein run day5 <input>
@@ -33,5 +37,4 @@
   [[filename]]
   (let [passes (map parse-pass (util/read-lines filename))]
   (println "Sanity check, highest ID: " (highest-id passes))
-  (println "Test parse-pass: " (parse-pass "FBFBBFFRLR"))
-  (println "Test highest-id:" (highest-id [[1 2 2] [2 3 4] [5 3 2]]))))
+  (println "My seat ID: " (empty-seat passes))))
