@@ -7,7 +7,7 @@
   (Integer/parseInt (apply str (map {\F \0 \B \1} row-str)) 2))
 
 (defn get-col
-  "Takes a string representation of a binary number in F (0) B (1) and returns an int"
+  "Takes a string representation of a binary number in L (0) R (1) and returns an int"
   [col-str]
   (Integer/parseInt (apply str (map {\R \1 \L \0} col-str)) 2))
 
