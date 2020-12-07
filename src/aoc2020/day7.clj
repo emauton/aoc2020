@@ -1,8 +1,6 @@
 (ns aoc2020.day7
   (:require [aoc2020.util :as util]
-            [clojure.core.memoize :as m]
-            [clojure.string :as s]
-            [clojure.pprint :as pp]))
+            [clojure.string :as s]))
 
 (defn parse-rule
   "Parse rules of the form
@@ -19,7 +17,7 @@
   "Parse lines of the form
     'light red bags contain 1 bright white bag, 2 muted yellow bags.'
    into a datastructure
-    {colour [colour0 colour1 ...]
+    {colour #{colour0 colour1 ...}
      ...}
    where we map any particular colour to all colours that can contain it.
   "
@@ -55,7 +53,6 @@
             bags)))
 
 (defn parse
-  "Apply a line parser over input lines, reducing into a map"
   [parser lines]
   (reduce parser {} lines))
 
