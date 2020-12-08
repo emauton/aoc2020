@@ -9,7 +9,7 @@
   {:pc 0 :text text :acc [0] :history []})
 
 (defn execute-step
-  [{:keys [pc text acc history] :as computer}]
+  [{:keys [pc text acc history]}]
   (let [[op n] (nth text pc)
         current (last acc)
         [new-pc new-acc] (cond
