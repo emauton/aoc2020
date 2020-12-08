@@ -19,8 +19,7 @@
    into a datastructure
     {colour #{colour0 colour1 ...}
      ...}
-   where we map any particular colour to all colours that can contain it.
-  "
+   where we map any particular colour to all colours that can contain it."
   [colours line]
   (let [[bag bags] (s/split line #" bags contain ")
         bags (s/split bags #",")
@@ -38,8 +37,7 @@
     'light red bags contain 1 bright white bag, 2 muted yellow bags.'
    into a datastructure
     {colour {colour0 number0 colour1 number1 ...} ...}
-   where we map any particular colour to the number of each colour it must contain.
-  "
+   where we map any particular colour to the number of each colour it must contain."
   [colours line]
   (let [[bag bags] (s/split line #" bags contain ")
         bags (s/split bags #",")
