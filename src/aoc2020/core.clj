@@ -6,6 +6,7 @@
             aoc2020.day6
             aoc2020.day7
             aoc2020.day8
+            aoc2020.day8c
             clojure.string)
   (:gen-class))
 
