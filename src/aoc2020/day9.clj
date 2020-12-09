@@ -10,8 +10,8 @@
       (contains? window x))))
 
 (defn first-invalid
-  "return the first element of number-series for which valid? returns true
-   when applied to the preceding pream-len elements of number-series"
+  "return the first element of number-series for which valid? returns false
+   for each of the preceding pream-len elements of number-series"
   [number-series pream-len]
   (let [window (apply sorted-set (take pream-len number-series))
         target (nth number-series pream-len)]
