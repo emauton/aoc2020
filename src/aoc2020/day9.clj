@@ -2,6 +2,7 @@
   (:require [aoc2020.util :as util]))
 
 (defn valid?
+  "does window contain an element (not= val)that sums with val to give target?"
   [val window target]
   (let [x (- target val)] 
     (if (= val x) 
@@ -9,6 +10,8 @@
       (contains? window x))))
 
 (defn first-invalid
+  "return the first element of number-series for which valid? returns true
+   when applied to the preceding pream-len elements of number-series"
   [number-series pream-len]
   (let [window (apply sorted-set (take pream-len number-series))
         target (nth number-series pream-len)]
@@ -17,6 +20,9 @@
       (recur (rest number-series) pream-len))))
 
 (defn encryption-weakness
+  "return the sum of the smallest and largest elements of checked-vals
+   when checked-vals is the first list of contiguous elements of 
+   number-series that add to target"
   [number-series target]
   (let [[total checked-vals] (reduce 
                               (fn [[acc values] n]
