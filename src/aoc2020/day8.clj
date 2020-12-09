@@ -24,6 +24,10 @@
            (let [[new-acc new-i] (execute-inst (nth instrs i) acc i)]
              (recur (conj v i) new-acc new-i)))))
 
+(defn indices-jmp-nop
+  [instrs]
+  (reduce () [] instrs))
+
 (defn main
   "Day 8 of Advent of Code 2020: Handheld Halting
       lein run day8 <input>
