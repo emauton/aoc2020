@@ -1,6 +1,5 @@
 (ns aoc2020.day9
-  (:require [aoc2020.util :as util]
-            [clojure.string :as s]))
+  (:require [aoc2020.util :as util]))
 
 (defn valid?
   [val window target]

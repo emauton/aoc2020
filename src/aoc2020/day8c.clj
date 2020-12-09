@@ -1,6 +1,5 @@
 (ns aoc2020.day8c
   (:require [aoc2020.util :as util]
-            [clojure.pprint :as pp]
             [clojure.string :as s]))
 
 (defn new-program
