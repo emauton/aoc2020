@@ -36,7 +36,7 @@
       lein run day9 <input> <preamble length>
   where <input> is a filename in project resources/"
   [[filename pream-len]]
-  (let [number-series (map #(Integer/parseInt %) (util/read-lines filename))
+  (let [number-series (map #(Long/parseLong %) (util/read-lines filename))
         invalid (first-invalid number-series (Integer/parseInt pream-len))]
     (println "first invalid:" invalid)
     (println "encryption weakness:" (encryption-weakness number-series invalid))))
