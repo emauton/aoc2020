@@ -1,5 +1,5 @@
 (ns aoc2020.day10
-  (:require [aoc2020.util :as util])
+  (:require [aoc2020.util :as util]))
 
 (defn get-diffs
   "return a pair [ones threes] of the count of differences of 1 and the 
@@ -25,25 +25,25 @@
   (map count (filter #(= 1 (first %)) 
                      (partition-by identity (get-jumps joltages)))))
 
+(defn get-multiplier
+  "Takes an argument n which is the number of items in a group. 
+   Returns the number of possible combinations of items in groups of no more than 2.
+   That is 2^n minus the 'barred' combinations with groups that are too long"
+  [n]
+  (- (int (Math/pow 2 n)) (apply + (range 1 (- n 1)))))
+
 (defn part-2
-  "janky answer to part 2"
+  "How many arrangments of adapters are possible?"
   [counts] 
-  (reduce (fn [acc count] 
-            (case count
-              2 (* acc 2)
-              3 (* acc 4)
-              4 (* acc 7)
-              acc))
-          1 counts))
-   
+  (reduce (fn [acc count] (* acc (get-multiplier (- count 1)))) 1 counts))
+
 (defn main
   "Day 10 of Advent of Code 2020: 
       lein run day10 <input> <preamble length>
   where <input> is a filename in project resources/"
   [[filename]]
   (let [joltages (sort (map #(Integer/parseInt %) (util/read-lines filename)))
-        [ones twos threes] (get-diffs joltages)
+        [ones _ threes] (get-diffs joltages)
         counts (count-runs joltages)]
     (println "Part 1, 1s x 3s:" (* ones threes))
-    (println "runs:" counts)
-    (println "answer:" (part-2 counts))))
+    (println "Part 2, possible arrangements:" (part-2 counts))))
