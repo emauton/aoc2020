@@ -13,12 +13,11 @@
   "Return neighbour coordinates for coord in grid"
   [grid coord]
   (let [dyx (for [i (range -1 2)
-                  j (range -1 2)]
+                  j (range -1 2)
+                  :when (not= [0 0] [i j])]
               [i j])]
     (filter (fn [possible]
-              (if (= coord possible)
-                false
-                (every? #(< -1 % (count grid)) possible)))
+              (every? #(< -1 % (count grid)) possible))
             (map (fn [delta] (vec (map + coord delta))) dyx))))
 
 (defn neighbour-values
