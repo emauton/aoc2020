@@ -3,6 +3,7 @@
   :url "https://github.com/emauton/aoc2020"
   :dependencies [[org.clojure/clojure "1.10.0"] 
                  [org.clojure/core.memoize "1.0.236"]
+                 [org.clojure/math.numeric-tower "0.0.4"]
                  [org.clojure/math.combinatorics "0.1.6"]]
   :main ^:skip-aot aoc2020.core
   :target-path "target/%s"
