@@ -10,20 +10,6 @@
   (map #(Integer/parseInt %)
        (filter #(not= "x" %) (s/split text #","))))
 
-<<<<<<< HEAD
-(defn parse-schedule-gcd
-  [text]
-  (let [buses (s/split text #",")
-        indices (range (count buses))
-        pairs (map 
-               (fn [[bus index]] [(Integer/parseInt bus) index]) 
-               (filter #(not= "x" (first %)) (map vector buses indices)))
-        new-pairs (map (fn [[b i]] [b (cond 
-                        (= i 0) i
-                        (< i b) (- b i)
-                        :else (- b (mod i b)))]) pairs)]
-    [(map #(first %) new-pairs) (map #(second %) new-pairs)]))
-=======
 (defn get-bus
   [t buses]
   (filter (fn [b] (not= nil b))
@@ -40,7 +26,6 @@
 ;; Part 2
 
 ;; CRT impl from https://rosettacode.org/wiki/Chinese_remainder_theorem#Clojure
->>>>>>> 1bff00297b3f0211296e12978f5734be4005d813
 
 (defn extended-gcd
   "The extended Euclidean algorithm
@@ -99,19 +84,9 @@
   (let [input (util/read-lines filename)
         earliest (Integer/parseInt (first input))
         buses (parse-buses (second input))
-<<<<<<< HEAD
-        [t b] (first (next-bus earliest buses))
-        p (parse-schedule-gcd (second input)) ]
-    (println "earliest time:" earliest)
-    (println "buses:" buses)
-    (println "next bus:" (next-bus earliest buses))
-    (println "product:" (* b (- t earliest)))
-    (println "chinese remainer:" (chinese_remainder (first p) (second p)))))
-=======
         [timestamp bus] (first (next-bus earliest buses))
         [primes congruences] (parse-schedule-crt (second input))]
     (println "bus number * schedule difference:"
              (* bus (- timestamp earliest)))
     (println "first timestamp for ordered bus departures:"
              (chinese-remainder primes congruences))))
->>>>>>> 1bff00297b3f0211296e12978f5734be4005d813
