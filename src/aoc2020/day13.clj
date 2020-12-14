@@ -19,7 +19,6 @@
                         (< i b) (- b i)
                         :else (- b (mod i b)))]) pairs)]
     [(map #(first %) new-pairs) (map #(second %) new-pairs)]))
-    ;(map (fn [[bus modifier]] [bus (- bus modifier)]) pairs)))
 
 (defn extended-gcd
   "The extended Euclidean algorithm
@@ -81,4 +80,3 @@
     (println "next bus:" (next-bus earliest buses))
     (println "product:" (* b (- t earliest)))
     (println "chinese remainer:" (chinese_remainder (first p) (second p)))))
-;    (println "Schedule match:" (get-timestamp (parse-schedule (second input))))))
