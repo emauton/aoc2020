@@ -43,10 +43,10 @@
 (defn field-candidates
   "Return candidate names for a given field index"
   [field tickets rules]
-  (let [all-fields (map #(nth % field) tickets)]
+  (let [all-vals (map #(nth % field) tickets)]
     (->> rules
          (filter (fn [rule]
-                   (every? #(valid? % rule) all-fields)))
+                   (every? #(valid? % rule) all-vals)))
          (map :field))))
 
 (defn all-candidates
