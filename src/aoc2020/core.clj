@@ -13,6 +13,7 @@
             aoc2020.day12
             aoc2020.day13
             aoc2020.day14
+            aoc2020.day14c
             aoc2020.day15
             aoc2020.day16
             clojure.string)
