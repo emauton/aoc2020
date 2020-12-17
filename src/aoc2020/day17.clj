@@ -17,9 +17,13 @@
 (defn map-cube
   "Return a map data structure initialised with input"
   [input]
-  (let [z 0]
-    ; y is row number
-    ; x is char in y
+  (let [z 0
+        cube {}]
+    (map-indexed 
+     (fn [y row] (map-indexed 
+                  (fn [x item] (assoc cube [z y x] item)) 
+                  row)) 
+     input)
     ))
 
 (defn main
@@ -34,5 +38,5 @@
                     ".######."
                     "###.####"
                     "######.#"]]
-    (println "Mags input:")
+    (println "Mags input:" (map-cube mags-input))
     (pp/pprint mags-input)))
