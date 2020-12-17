@@ -1,7 +1,5 @@
 (ns aoc2020.day17
-  (:require [aoc2020.util :as util] 
-            [clojure.pprint :as pp]
-            [clojure.string :as s]))
+  (:require [aoc2020.util :as util]))
 
 (defn neighbours-3d
   "Return neighbour coordinates for coord (in infinite space)
@@ -47,23 +45,17 @@
      (fn [acc row] (reduce (fn [inneracc [y x item]] (assoc inneracc [w z y x] item)) acc row)) 
      cube indexed-input)))
 
-(defn neighbour-values-3d
+(defn neighbour-values
   "Return list of neighbour values (that is '#' or '.') at coord,
-   by rules specified in neighbours"
-  [cube coord]
-  (sort (map #(get cube %) (neighbours-3d coord))))
+   by rules specified in neighbours-fn"
+  [neighbours-fn cube coord]
+  (sort (map #(get cube %) (neighbours-fn coord))))
 
-(defn neighbour-values-4d
-  "Return list of neighbour values (that is '#' or '.') at coord,
-   by rules specified in neighbours"
-  [cube coord]
-  (sort (map #(get cube %) (neighbours-4d coord))))
-
-(defn new-seat-3d
+(defn new-seat
   "Return new seat val at coord given direct rules"
-  [cube coord]
+  [neighbours-fn cube coord]
   (let [val (get cube coord)
-        n (neighbour-values-3d cube coord)
+        n (neighbour-values neighbours-fn cube coord)
         active-count (count (filter #(= \# %) n))]
     (case val
       \# (if (or (= active-count 2) (= active-count 3)) 
@@ -73,29 +65,10 @@
            \#
            \.))))
 
-(defn new-seat-4d
-  "Return new seat val at coord given direct rules"
-  [cube coord]
-  (let [val (get cube coord)
-        n (neighbour-values-4d cube coord)
-        active-count (count (filter #(= \# %) n))]
-    (case val
-      \# (if (or (= active-count 2) (= active-count 3)) 
-           \# 
-           \.)
-      (nil \.) (if (= active-count 3)
-           \#
-           \.))))
-
-(defn next-round-3d
-  [cube]
-  (let [n-list (distinct (apply concat (mapv #(neighbours-3d (first %)) cube)))]
-    (reduce (fn [new-cube n] (assoc new-cube n (new-seat-3d cube n))) {} n-list)))
-
-(defn next-round-4d
-  [cube]
-  (let [n-list (distinct (apply concat (mapv #(neighbours-4d (first %)) cube)))]
-    (reduce (fn [new-cube n] (assoc new-cube n (new-seat-4d cube n))) {} n-list)))
+(defn next-round
+  [neighbours-fn cube]
+  (let [n-list (distinct (apply concat (mapv #(neighbours-fn (first %)) cube)))]
+    (reduce (fn [new-cube n] (assoc new-cube n (new-seat neighbours-fn cube n))) {} n-list)))
 
 (defn count-active
   [cube]
@@ -121,6 +94,8 @@
                     "#..###.."
                     ".##.####"
                     "..#####."]
+        next-round-3d (partial next-round neighbours-3d)
+        next-round-4d (partial next-round neighbours-4d)
         mags-cube-3d (map-cube-3d mags-input)
         cian-cube-3d (map-cube-3d cian-input)
         sixth-3d-mags (nth (iterate next-round-3d mags-cube-3d) 6)
