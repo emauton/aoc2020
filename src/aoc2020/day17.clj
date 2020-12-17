@@ -22,7 +22,7 @@
                    j (range -1 2)
                    k (range -1 2)
                    l (range -1 2)
-                   :when (not= [0 0 0] [i j k l])]
+                   :when (not= [0 0 0 0] [i j k l])]
               [i j k l])]
     (map (fn [delta] (vec (map + coord delta))) dwzyx)))
 
@@ -114,12 +114,11 @@
                     "###.####"
                     "######.#"]
         mags-cube-3d (map-cube-3d mags-input)
-        sixth-3d (next-round-3d (next-round-3d (next-round-3d 
-               (next-round-3d (next-round-3d (next-round-3d mags-cube-3d))))))
+        sixth-3d-mags (nth (iterate next-round-3d mags-cube-3d) 6)
         mags-cube-4d (map-cube-4d mags-input)
-        sixth-4d (next-round-4d (next-round-4d (next-round-4d 
-               (next-round-4d (next-round-4d (next-round-4d mags-cube-4d))))))]
-    (println "New count" (count-active sixth-3d))
-    (println "New count" (count-active sixth-4d))))
+        sixth-4d-mags (nth (iterate next-round-4d mags-cube-4d) 6)]
+;        sixth-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d mags-cube-4d))))))]
+    (println "New count" (count-active sixth-3d-mags))
+    (println "New count" (count-active sixth-4d-mags))))
     
     ;(pp/pprint mags-input)))
