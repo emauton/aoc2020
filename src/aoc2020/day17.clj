@@ -70,6 +70,9 @@
   (let [n-list (distinct (apply concat (mapv #(neighbours-fn (first %)) cube)))]
     (reduce (fn [new-cube n] (assoc new-cube n (new-seat neighbours-fn cube n))) {} n-list)))
 
+(def next-round-3d (partial next-round neighbours-3d))
+(def next-round-4d (partial next-round neighbours-4d))
+
 (defn count-active
   [cube]
   (count (filter #(= \# (second %)) cube)))
@@ -86,6 +89,11 @@
                     ".######."
                     "###.####"
                     "######.#"]
+        mags-cube-3d (map-cube-3d mags-input)
+        mags-cube-4d (map-cube-4d mags-input)
+        sixth-3d-mags (nth (iterate next-round-3d mags-cube-3d) 6)
+        sixth-4d-mags (nth (iterate next-round-4d mags-cube-4d) 6)
+
         cian-input [".##...#."
                     ".#.###.."
                     "..##.#.#"
@@ -94,15 +102,9 @@
                     "#..###.."
                     ".##.####"
                     "..#####."]
-        next-round-3d (partial next-round neighbours-3d)
-        next-round-4d (partial next-round neighbours-4d)
-        mags-cube-3d (map-cube-3d mags-input)
         cian-cube-3d (map-cube-3d cian-input)
-        sixth-3d-mags (nth (iterate next-round-3d mags-cube-3d) 6)
         sixth-3d-cian (nth (iterate next-round-3d cian-cube-3d) 6)
-        mags-cube-4d (map-cube-4d mags-input)
         cian-cube-4d (map-cube-4d cian-input)
-        sixth-4d-mags (nth (iterate next-round-4d mags-cube-4d) 6)
         sixth-4d-cian (nth (iterate next-round-4d cian-cube-4d) 6)]
     (println "3d mags" (count-active sixth-3d-mags))
     (println "4d mags" (count-active sixth-4d-mags))
