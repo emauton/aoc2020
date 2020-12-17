@@ -113,12 +113,23 @@
                     ".######."
                     "###.####"
                     "######.#"]
+        cian-input [".##...#."
+                    ".#.###.."
+                    "..##.#.#"
+                    "##...#.#"
+                    "#..#...#"
+                    "#..###.."
+                    ".##.####"
+                    "..#####."]
         mags-cube-3d (map-cube-3d mags-input)
+        cian-cube-3d (map-cube-3d cian-input)
         sixth-3d-mags (nth (iterate next-round-3d mags-cube-3d) 6)
+        sixth-3d-cian (nth (iterate next-round-3d cian-cube-3d) 6)
         mags-cube-4d (map-cube-4d mags-input)
-        sixth-4d-mags (nth (iterate next-round-4d mags-cube-4d) 6)]
-;        sixth-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d (next-round-4d mags-cube-4d))))))]
-    (println "New count" (count-active sixth-3d-mags))
-    (println "New count" (count-active sixth-4d-mags))))
-    
-    ;(pp/pprint mags-input)))
+        cian-cube-4d (map-cube-4d cian-input)
+        sixth-4d-mags (nth (iterate next-round-4d mags-cube-4d) 6)
+        sixth-4d-cian (nth (iterate next-round-4d cian-cube-4d) 6)]
+    (println "3d mags" (count-active sixth-3d-mags))
+    (println "4d mags" (count-active sixth-4d-mags))
+    (println "3d cian" (count-active sixth-3d-cian))
+    (println "4d cian" (count-active sixth-4d-cian))))
