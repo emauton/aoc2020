@@ -23,8 +23,11 @@
      (fn [y row] (map-indexed 
                   (fn [x item] (assoc cube [z y x] item)) 
                   row)) 
-     input)
-    ))
+     input)))
+
+(defn count-active
+  [cube]
+  (filter #(= "#" (second %)) cube))
 
 (defn main
   "Day 17 of Advent of Code 2020: Conway Cubes
@@ -38,5 +41,6 @@
                     ".######."
                     "###.####"
                     "######.#"]]
-    (println "Mags input:" (map-cube mags-input))
+    (println "Count active Mags input:" (count-active (map-cube mags-input)))
+    (println "this is not working because the map I create in map-cube is nested indide two sequences and i don't have time to fix it right now :) ")
     (pp/pprint mags-input)))
