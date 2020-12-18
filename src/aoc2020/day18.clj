@@ -56,24 +56,18 @@
   (first (drop-while (fn [iter] (some #(= :open %) iter)) 
               (iterate compute-paren-partial syms)))))
 
+(defn do-maths
+  [input part]
+  (let [compute-fn (if (= part 1)
+                     compute-prefix
+                     compute-prefix-sum-first)]
+    (apply + (flatten (map (fn [expr]
+       (compute-paren compute-fn (all-paren compute-fn expr))) input )))))
+
 (defn main
   "Day 18 of Advent of Code 2020: Operation Order
       lein run day18 filename"
   [[filename]]
   (let [input (map parse (util/read-lines filename))] 
-    (println "Part 1:"
-     (apply + 
-            (flatten 
-             (map 
-              (fn [expr] 
-                (compute-paren compute-prefix (all-paren compute-prefix expr))) 
-              input))))
-    (compute-prefix-sum-first (parse "2 + 4 * 9 * 6 + 9 * 8 + 6 + 6 + 2 + 4 * 2"))
-    (println "Part 2:"
-     (apply + 
-            (flatten 
-             (map 
-              (fn [expr] 
-                (compute-paren compute-prefix-sum-first (all-paren compute-prefix-sum-first expr))) 
-              input))))))
-
+    (println "Part 1:" (do-maths input 1))
+    (println "Part 2:" (do-maths input 2))))
