@@ -21,35 +21,59 @@
             (case n
               :star [acc *]
               :plus [acc +]
-            ;  :open (reduced [acc op])
-            ;  :close (reduced [acc op])
               [(op acc n) +]))
           [0 +]
           syms))
 
-(defn compute-paren
+(defn compute-prefix-sum
   [syms]
+  (if (not (some #(= :plus %) syms))
+    syms
+    (let [parts (partition-by #(= :star %) syms)]
+      (reduce (fn [acc p]
+                (concat acc 
+                        (if (some #(= :plus %) p)
+                          [(apply + (filter #(not= :plus %) p))]
+                          p))) 
+              () parts))))
+
+(defn compute-prefix-sum-first
+  [syms]
+  (let [sum-computed (compute-prefix-sum syms)]
+    [(apply * (filter #(not= :star %) sum-computed)) *]))
+
+(defn compute-paren
+  [compute-fn syms]
   (let [pre (take-while #(not= :close %) syms)
         mid (reverse (take-while #(not= :open %) (reverse pre)))
         pre (drop-last (inc (count mid)) pre)
         post (rest (drop-while #(not= :close %) syms))] 
-       ; (println mid)
-       ; (println (cons (first (compute-prefix mid)) post))
-    (concat pre (cons (first (compute-prefix mid)) post))))
-;             (first (compute-prefix (take-while #(not= :open %) 
-;                    (reverse (take-while #(not= :close %) syms))))) post))))
+    (concat pre (cons (first (compute-fn mid)) post))))
 
 (defn all-paren
-  [syms]
+  [compute-fn syms]
+  (let [compute-paren-partial (partial compute-paren compute-fn)]
   (first (drop-while (fn [iter] (some #(= :open %) iter)) 
-              (iterate compute-paren syms))))
-
+              (iterate compute-paren-partial syms)))))
 
 (defn main
   "Day 18 of Advent of Code 2020: Operation Order
       lein run day18 filename"
   [[filename]]
   (let [input (map parse (util/read-lines filename))] 
-;    (println (reduce (fn [acc val] (+ acc (first val))) (map (fn [expr] (compute-paren (all-paren expr))) input)))))
-    (println (apply + (flatten (map (fn [expr] (compute-paren (all-paren expr))) input))))))
+    (println "Part 1:"
+     (apply + 
+            (flatten 
+             (map 
+              (fn [expr] 
+                (compute-paren compute-prefix (all-paren compute-prefix expr))) 
+              input))))
+    (compute-prefix-sum-first (parse "2 + 4 * 9 * 6 + 9 * 8 + 6 + 6 + 2 + 4 * 2"))
+    (println "Part 2:"
+     (apply + 
+            (flatten 
+             (map 
+              (fn [expr] 
+                (compute-paren compute-prefix-sum-first (all-paren compute-prefix-sum-first expr))) 
+              input))))))
 
