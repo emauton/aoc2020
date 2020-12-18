@@ -21,36 +21,35 @@
             (case n
               :star [acc *]
               :plus [acc +]
-              :open (reduced [acc op])
-              :close (reduced [acc op])
+            ;  :open (reduced [acc op])
+            ;  :close (reduced [acc op])
               [(op acc n) +]))
           [0 +]
           syms))
 
-(defn expr
-  [syms acc]
-  (let [[prefix op] (compute-prefix syms)
-        remain (drop-while #(not= :open %) syms)]
-    (if (empty? remain)
-      prefix
-      (recur (rest remain) prefix))
+(defn compute-paren
+  [syms]
+  (let [pre (take-while #(not= :close %) syms)
+        mid (reverse (take-while #(not= :open %) (reverse pre)))
+        pre (drop-last (inc (count mid)) pre)
+        post (rest (drop-while #(not= :close %) syms))] 
+       ; (println mid)
+       ; (println (cons (first (compute-prefix mid)) post))
+    (concat pre (cons (first (compute-prefix mid)) post))))
+;             (first (compute-prefix (take-while #(not= :open %) 
+;                    (reverse (take-while #(not= :close %) syms))))) post))))
 
-    ))
+(defn all-paren
+  [syms]
+  (first (drop-while (fn [iter] (some #(= :open %) iter)) 
+              (iterate compute-paren syms))))
 
-;(defn expr
-;  [[n op & remainder]]
-;  (let [op-fn {\+ + \* *}]
-;    (cond
-;      (nil? nil) n
-;      (= op \)) n 
-;      (= n \() (recur (rest symbols))
-;      :else ((op-fn op) n (recur remainder)))))
 
 (defn main
   "Day 18 of Advent of Code 2020: Operation Order
       lein run day18 filename"
   [[filename]]
-  (let [test-str "2 * 3 + 8 * (4 * 5)"
-        parsed (parse test-str)]
-    (println "parse" test-str)
-    (println "compute" (compute-prefix parsed))))
+  (let [input (map parse (util/read-lines filename))] 
+;    (println (reduce (fn [acc val] (+ acc (first val))) (map (fn [expr] (compute-paren (all-paren expr))) input)))))
+    (println (apply + (flatten (map (fn [expr] (compute-paren (all-paren expr))) input))))))
+
