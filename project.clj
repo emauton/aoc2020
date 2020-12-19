@@ -4,7 +4,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"] 
                  [org.clojure/core.memoize "1.0.236"]
                  [org.clojure/math.numeric-tower "0.0.4"]
-                 [org.clojure/math.combinatorics "0.1.6"]]
+                 [org.clojure/math.combinatorics "0.1.6"]
+                 [instaparse "1.4.10"]]
   :jvm-opts ["-Xmx3g"]
   :main ^:skip-aot aoc2020.core
   :target-path "target/%s"
