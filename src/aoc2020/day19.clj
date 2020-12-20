@@ -42,6 +42,12 @@
   (let [[rules _ msgs] (partition-by #(= "" %) (util/read-lines filename))
         parsed-rules (parse-rules rules)
         query (re-pattern (build-regex parsed-rules "0"))]
-    (println "Match count:" (reduce (fn [acc m] (if (exact-match? m query) (inc acc) acc)) 0 msgs))
-    (println "query 8:" (build-regex parsed-rules "8"))
-    (println "query 11:" (build-regex parsed-rules "11"))))
+    ; 31: 38 26 | 77 132
+    ; 42: 65 26 | 97 132
+    
+    ; 8: 42 | 42 8
+    ; 11: 42 31 | 42 11 31
+    
+    (println "Match count:" (reduce (fn [acc m] (if (exact-match? m query) (inc acc) acc)) 0 msgs))))
+;    (println "query 42:" (build-regex parsed-rules "42"))
+;    (println "query 31:" (build-regex parsed-rules "31"))))
