@@ -80,38 +80,67 @@
   (map #(let [pt (get-tile %)] {:id (first pt) :edges (second pt)}) 
        (map #(s/split % #"\n") tiles)))
 
-;(defn count-matches
-;  [tile tile-map]
-;  (let [borders ])
-;  )
-
 (defn match?
   [[a1 a2] [b1]]
   (or (= a1 b1) (= a2 b1)))
 
+(defn count-matches
+  [tile tile-list]
+  (let [matches (reduce 
+                 (fn [acc t] (let [candidates (for [a-edge (:edges tile)
+                                                    b-edge (:edges t)
+                                                    :when (not= (:id tile) (:id t))]
+                                                (match? a-edge b-edge))]
+                               (if (some true? candidates)
+                                 (conj acc t)
+                                 acc)))
+                 [] tile-list)]
+    (count matches)))
+
 (defn corner?
   [tile tile-list]
-  (let [matches (reduce (fn [acc t] 
-                          (let [candidates (for [a-edge (:edges tile)
-                                                 b-edge (:edges t)
-                                                 :when (not= (:id tile)
-                                                             (:id t))]
-                                             (match? a-edge b-edge))]
-                            (if (some true? candidates)
-                              (conj acc t)
-                              acc)))
-                        []
-                        tile-list)]
-    (= 2 (count matches))))
+  (= 2 (count-matches tile tile-list)))
+
+(defn side?
+  [tile tile-list]
+  (= 3 (count-matches tile tile-list)))
 
 (defn find-corners
   [tiles]
-  (reduce 
-    (fn [acc t] (if (corner? t tiles)
-                  (conj acc t)
-                  acc))
-    []
-   tiles))
+  (reduce (fn [acc t] (if (corner? t tiles) (conj acc t) acc)) [] tiles))
+
+(defn categorise-tiles
+  [tiles]
+  (reduce
+   (fn [[corners sides others] t] (case (count-matches t tiles)
+                                    2 [(conj corners t) sides others]
+                                    3 [corners (conj sides t) others]
+                                    [corners sides (conj others t)]))
+   [[][][]] tiles))
+
+(defn add-sides
+  [centre sides]
+  )
+
+(defn add-corners 
+  [centre corners]
+  )
+
+(defn find-match
+  [t tiles]
+  )
+
+(defn arrange-four
+  [[t tiles] depth]
+  (let [centre {[5 5] (first t)}]))
+
+(defn arrange-tiles
+  [tiles depth]
+  (if (> (count tiles) 4)
+    (let [[corners sides others] (categorise-tiles tiles)
+          centre (arrange-tiles others (inc depth))]
+      (add-corners (add-sides centre sides) corners))
+    (arrange-four tiles)))
 
 (defn main
   "Day 20 of Advent of Code 2020: Jurassic Jigsaw
@@ -122,5 +151,5 @@
   (let [tiles (parse-tiles (s/split (util/slurp-resource filename) #"\n\n"))
         corners (find-corners tiles)]
     (println "Tiles count:" (count tiles))
-    (pp/pprint corners)
+    (pp/pprint (categorise-tiles tiles))
     (println "Corner ID product:" (apply * (map :id corners)))))
