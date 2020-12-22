@@ -1,6 +1,7 @@
 (ns aoc2020.day22
   (:require [aoc2020.util :as util]
-            [clojure.string :as s]))
+            [clojure.string :as s]
+            [clojure.core.memoize :as m]))
 
 (defn parse
   [input]
@@ -69,13 +70,14 @@
          :two (conj (vec (rest two)) c2 c1)
          :history history}))))
 
-(defn recursive-game
-  [{:keys [one two history] :as decks}]
-  (cond
-    (some #(= [one two] %) history) {:winner :one :deck one}
-    (empty? one) {:winner :two :deck two}
-    (empty? two) {:winner :one :deck one}
-    :else (recur (recursive-round decks))))
+(def recursive-game
+  (m/memo
+    (fn [{:keys [one two history] :as decks}]
+      (cond
+        (some #(= [one two] %) history) {:winner :one :deck one}
+        (empty? one) {:winner :two :deck two}
+        (empty? two) {:winner :one :deck one}
+        :else (recur (recursive-round decks))))))
 
 (defn main
   "Day 22 of Advent of Code 2020: Crab Combat
