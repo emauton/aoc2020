@@ -118,21 +118,29 @@
                                     [corners sides (conj others t)]))
    [[][][]] tiles))
 
-(defn add-sides
-  [centre sides]
-  )
-
-(defn add-corners 
-  [centre corners]
-  )
-
-(defn find-match
-  [t tiles]
-  )
+;(defn add-sides
+;  [centre sides]
+;  )
+;
+;(defn add-corners 
+;  [centre corners]
+;  )
+;
+;(defn find-match
+;  [t tiles]
+;  )
+;
+;(defn find-double-match
+;  [t1 t2 tiles]
+;  )
 
 (defn arrange-four
   [[t tiles] depth]
-  (let [centre {[5 5] (first t)}]))
+  (let [centre {[depth depth] t}
+        top-right ]
+    (assoc centre [depth (+ 1 depth)] (find-match t tiles))
+    (assoc centre [(+ 1 depth) depth] (find-match t tiles))
+    ))
 
 (defn arrange-tiles
   [tiles depth]
@@ -140,7 +148,7 @@
     (let [[corners sides others] (categorise-tiles tiles)
           centre (arrange-tiles others (inc depth))]
       (add-corners (add-sides centre sides) corners))
-    (arrange-four tiles)))
+    (arrange-four tiles depth)))
 
 (defn main
   "Day 20 of Advent of Code 2020: Jurassic Jigsaw
