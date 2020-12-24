@@ -1,7 +1,5 @@
 (ns aoc2020.day24
   (:require [aoc2020.util :as util]
-            [clojure.pprint :as pp]
-            [clojure.string :as s]
             [instaparse.core :as insta]
             [clojure.set]))
 
