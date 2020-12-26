@@ -27,7 +27,7 @@
                (apply str (map first rows))] ; left
         matchers (map binary-matcher edges)]
     {:id id
-     :image core
+     :image image 
      :edges matchers}))
 
 (defn neighbours
