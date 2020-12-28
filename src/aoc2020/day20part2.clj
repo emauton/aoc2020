@@ -47,12 +47,17 @@
 (defn add-neighbours
   [tile-list]
   (map (fn [tile] (assoc tile :borders (matching-sides tile tile-list))) tile-list))
-  
-(defn get-top-left-corner
+
+(defn count-matches
+  [tile]
+  (count (filter #(not= nil %) (map (fn [[k v]] (last v)) (:borders tile)))))
+
+(defn get-corners
   [tiles]
-  (reduce #(if (and (nil? (last (:top (:borders %2)))) (nil? (last (:left (:borders %2)))))
-             (reduced %2)
-             nil) nil tiles))
+  (reduce (fn [corners t] (if (= (count-matches t) 2)
+                            (conj corners t)
+                            corners))
+          [] tiles))
 
 (defn get-neighbour-id
   [side tile]
@@ -137,6 +142,20 @@
 ;    (do (println "t1b t2b" t1border t2border)
       transform-list
       (conj transform-list [:flip (if (= t1side :right) :vertical :horizontal)]))))
+
+(defn get-top-left-corner
+  [tiles]
+  (let [rotate-seq (iterate #(transform-once % :rotate :right) (first (get-corners tiles)))]
+    (first (drop-while (fn [tile]
+                         (let [borders (:borders tile)]
+                           (not (and (nil? (last (:top borders)))
+                                     (nil? (last (:left borders)))))))
+                       rotate-seq))))
+  
+;  (reduce #(if (and (nil? (last (:top (:borders %2)))) (nil? (last (:left (:borders %2)))))
+;             (reduced %2)
+;             nil) nil tiles))
+
 
 (defn print-tile
   [tile]
