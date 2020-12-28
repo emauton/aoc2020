@@ -75,9 +75,9 @@
   (case ttype
     :rotate (case direction
               :left (apply mapv vector (mapv reverse core))
-              :right (mapv reverse (apply mapv vector core)))
+              :right (mapv #(vec (reverse %)) (apply map vector core)))
     :flip (case direction
-            :horizontal (mapv reverse core)
+            :horizontal (mapv #(vec (reverse %)) core)
             :vertical (vec (reverse core)))))
 
 (defn transform-borders
@@ -94,12 +94,12 @@
                       :left (:bottom borders)})
     :flip (case direction
             :horizontal {:top [(vec (reverse (first (:top borders)))) (second (:top borders))] 
-                         :right (:left borders) 
+                         :right [(vec (reverse (first (:left borders)))) (second (:left borders))] 
                          :bottom [(vec (reverse (first (:bottom borders)))) (second (:bottom borders))]
-                         :left (:right borders)}
-            :vertical {:top (:bottom borders)
+                         :left [(vec (reverse (first (:right borders)))) (second (:right borders))]}
+            :vertical {:top [(vec (reverse (first (:bottom borders)))) (second (:bottom borders))]
                        :right [(vec (reverse (first (:right borders)))) (second (:right borders))]
-                       :bottom (:top borders)
+                       :bottom [(vec (reverse (first (:top borders)))) (second (:top borders))] 
                        :left [(vec (reverse (first (:left borders)))) (second (:left borders))]})))
 
 (defn transform-once
@@ -186,27 +186,92 @@
               transformed-start (transform-tile start-tile transform-list)
               new-row (create-row transformed-start tiles)
               rows (conj rows new-row)]
-              (println "transform list" transform-list)
           (recur (get-neighbour-id :bottom transformed-start) rows))))))
 
 (defn check-rows
   [r1 r2]
   (filter false? (map (fn [tr1 tr2] 
-                        (println "check rows:"(get-neighbour-id :bottom tr1) (:id tr2))
-                        (println (get-neighbour-id :top tr2) (:id tr1))
                         (and
                          (= (get-neighbour-id :bottom tr1) (:id tr2))
                          (= (get-neighbour-id :top tr2) (:id tr1)))) r1 r2)))
 
-(defn run-tests
-  [tiles]
-  (let [corner (get-top-left-corner tiles)
-        row (create-row corner tiles)
-        start2 (get-tile tiles (get-neighbour-id :bottom corner))
-        start3 (get-tile tiles (get-neighbour-id :bottom start2))]
-    (print-row row)
-    (print-row (create-row start2 tiles))
-    (print-row (create-row start3 tiles))))
+;(defn run-tests
+;  [tiles]
+;  (let [corner (get-top-left-corner tiles)
+;        row (create-row corner tiles)
+;        start2 (get-tile tiles (get-neighbour-id :bottom corner))
+;        start3 (get-tile tiles (get-neighbour-id :bottom start2))]
+;    (print-row row)
+;;    (print-row (create-row start2 tiles))
+;    (print-row (create-row start3 tiles))))
+
+(defn get-image
+  [grid]
+  (let [cores (map (fn [row] (map :core row)) grid)]
+    (apply concat (mapv #(reduce (fn [acc tile]
+                                   (vec (map-indexed (fn [index core-row]
+                                                       (vec (concat core-row (nth tile index))))
+                                                     acc)))
+                                 %)
+                        cores))))
+
+(def monster-string [(vec "                  # ") 
+                     (vec "#    ##    ##    ###")
+                     (vec " #  #  #  #  #  #   ")])
+
+(def monster-string2 [(vec (s/reverse "                  # ")) 
+                     (vec (s/reverse "#    ##    ##    ###"))
+                     (vec (s/reverse " #  #  #  #  #  #   "))])
+
+(def monster-offsets
+  (for [i (range (count monster-string)) 
+        j (range (count (first monster-string)))
+        :when (= \# (get-in monster-string [i j]))]
+    [i j]))
+
+(def monster-offsets2
+  (for [i (range (count monster-string2)) 
+        j (range (count (first monster-string2)))
+        :when (= \# (get-in monster-string2 [i j]))]
+    [i j]))
+
+(defn match-monster?
+  [index image]
+    (or (every? (fn [o] (= \# (get-in image (mapv + index o)))) monster-offsets)
+        (every? (fn [o] (= \# (get-in image (mapv + index o)))) monster-offsets)))
+
+(defn generate-offsets
+  [row-count row-length]
+  (for [i (range (inc (- row-count (count monster-string))))
+        j (range (inc (- row-length (count (first monster-string)))))]
+    [i j]))
+
+(defn transform-image
+  [image list]
+  (if (not= 0 (count list))
+       (reduce (fn [acc [ttype direction]] 
+                 (transform-core acc ttype direction))
+               image list)
+       image))
+
+(defn count-monsters
+  [image offsets]
+  (count (filter #(match-monster? % image) offsets)))
+  
+(defn count-non-monster-hashes
+  [image]
+  (let [offsets (generate-offsets (count image) (count (first image)))
+        transform-list [[]
+                        [[:rotate :left]]
+                        [[:rotate :left] [:rotate :left]]
+                        [[:rotate :right]]
+                        [[:flip :vertical]]
+                        [[:flip :vertical] [:rotate :left]]
+                        [[:flip :vertical] [:rotate :left] [:rotate :left]]
+                        [[:flip :vertical] [:rotate :right]]]
+        m (first (filter #(not= 0 %) (map #(count-monsters (transform-image image %) offsets) transform-list)))
+        hash-count (reduce (fn [acc row] (+ acc (count (filter #(= \# %) row)))) 0 image)]
+    (- hash-count (* m 15))))
 
 (defn main
   "Day 20 of Advent of Code 2020: Jurassic Jigsaw
@@ -221,7 +286,7 @@
 ;        r2t1 (get-tile tiles-with-neighbours (get-neighbour-id :bottom (first row1)))
 ;        r2t1pt (transform-tile r2t1 (transform-to-match :bottom (first row1) r2t1))
 ;        row2 (create-row r2t1pt tiles-with-neighbours)
-   ] ;grid (arrange-tiles tiles-with-neighbours)]
+        grid (arrange-tiles tiles-with-neighbours)]
 ;        (print-tile zoom)
 ;        (print-tile bing)
 ;        (print-tile (transform-tile bing [[:rotate :left]]))
@@ -231,7 +296,8 @@
    ; (print-tile (second (nth grid 1)))
    ; (print-tile bing)
    ; (print-tile (second (nth grid 2)))
+   (println (count-non-monster-hashes (get-image grid)))
 ;    (println (check-rows (nth grid 1) (nth grid 2)))
 ;    (println (check-rows (nth grid 5) (nth grid 6)))
-       (run-tests tiles-with-neighbours)
-    ));(pp/pprint grid)))
+    ;   (run-tests tiles-with-neighbours)
+    ))
