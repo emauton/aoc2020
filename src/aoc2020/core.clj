@@ -22,6 +22,7 @@
             aoc2020.day19c
             aoc2020.day20c
             aoc2020.day20m
+            aoc2020.day20part2
             aoc2020.day21
             aoc2020.day22
             aoc2020.day23mags

@@ -1,0 +1,551 @@
+borders neighbour pre {:top [[911 967] 1913], :right [[659 805] nil], :bottom [[690 309] 3557], :left [[285 738] 2551]}
+(right) current id, transform list 3557 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[659 805] nil], :right [[967 911] 1913], :bottom [[285 738] 2551], :left [[309 690] 3557]}
+borders neighbour pre {:top [[967 911] 1061], :right [[625 569] 3061], :bottom [[711 909] 3907], :left [[697 629] nil]}
+(right) current id, transform list 1061 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[697 629] nil], :right [[909 711] 3907], :bottom [[625 569] 3061], :left [[911 967] 1061]}
+borders neighbour pre {:top [[631 953] 1367], :right [[711 909] 1913], :bottom [[517 641] nil], :left [[603 873] 1427]}
+(right) current id, transform list 1913 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[641 517] nil], :right [[873 603] 1427], :bottom [[953 631] 1367], :left [[909 711] 1913]}
+borders neighbour pre {:top [[603 873] 3907], :right [[677 661] 3301], :bottom [[527 961] 1559], :left [[931 791] nil]}
+(right) current id, transform list 3907 [[:rotate :left]]
+borders neighbour post {:top [[677 661] 3301], :right [[527 961] 1559], :bottom [[931 791] nil], :left [[603 873] 3907]}
+borders neighbour pre {:top [[261 642] nil], :right [[961 527] 1427], :bottom [[822 435] 2657], :left [[432 54] 1511]}
+(right) current id, transform list 1427 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[435 822] 2657], :right [[54 432] 1511], :bottom [[642 261] nil], :left [[527 961] 1427]}
+borders neighbour pre {:top [[241 572] nil], :right [[556 209] 2887], :bottom [[94 488] 3527], :left [[432 54] 1559]}
+(right) current id, transform list 1559 []
+borders neighbour post {:top [[241 572] nil], :right [[556 209] 2887], :bottom [[94 488] 3527], :left [[432 54] 1559]}
+borders neighbour pre {:top [[579 777] nil], :right [[559 977] 2029], :bottom [[650 325] 2957], :left [[209 556] 1511]}
+(right) current id, transform list 1511 []
+borders neighbour post {:top [[579 777] nil], :right [[559 977] 2029], :bottom [[650 325] 2957], :left [[209 556] 1511]}
+borders neighbour pre {:top [[559 977] 2887], :right [[978 303] 1307], :bottom [[3 768] 2593], :left [[637 761] nil]}
+(right) current id, transform list 2887 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[637 761] nil], :right [[768 3] 2593], :bottom [[978 303] 1307], :left [[977 559] 2887]}
+borders neighbour pre {:top [[887 955] nil], :right [[768 3] 2029], :bottom [[8 64] 1291], :left [[377 634] 2423]}
+(right) current id, transform list 2029 [[:flip :horizontal]]
+borders neighbour post {:top [[955 887] nil], :right [[377 634] 2423], :bottom [[64 8] 1291], :left [[768 3] 2029]}
+borders neighbour pre {:top [[709 653] nil], :right [[634 377] 2593], :bottom [[485 670] 2851], :left [[969 591] 1019]}
+(right) current id, transform list 2593 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[670 485] 2851], :right [[591 969] 1019], :bottom [[653 709] nil], :left [[377 634] 2593]}
+borders neighbour pre {:top [[915 807] nil], :right [[743 925] nil], :bottom [[919 935] 2777], :left [[969 591] 2423]}
+(right) current id, transform list 2423 []
+borders neighbour post {:top [[915 807] nil], :right [[743 925] nil], :bottom [[919 935] 2777], :left [[969 591] 2423]}
+borders neighbour pre {:top [[466 302] 3739], :right [[285 738] 1061], :bottom [[666 357] 3061], :left [[352 26] 2843]}
+(right) current id, transform list 3739 [[:rotate :left]]
+borders neighbour post {:top [[285 738] 1061], :right [[666 357] 3061], :bottom [[352 26] 2843], :left [[466 302] 3739]}
+borders neighbour pre {:top [[357 666] 2551], :right [[625 569] 1913], :bottom [[859 875] 1367], :left [[720 45] 2699]}
+(right) current id, transform list 2551 [[:rotate :left]]
+borders neighbour post {:top [[625 569] 1913], :right [[859 875] 1367], :bottom [[720 45] 2699], :left [[357 666] 2551]}
+borders neighbour pre {:top [[953 631] 3907], :right [[829 755] 3301], :bottom [[545 529] 3049], :left [[875 859] 3061]}
+(right) current id, transform list 3061 []
+borders neighbour post {:top [[953 631] 3907], :right [[829 755] 3301], :bottom [[545 529] 3049], :left [[875 859] 3061]}
+borders neighbour pre {:top [[661 677] 1427], :right [[829 755] 1367], :bottom [[609 537] 2003], :left [[567 945] 2657]}
+(right) current id, transform list 1367 [[:flip :horizontal]]
+borders neighbour post {:top [[677 661] 1427], :right [[567 945] 2657], :bottom [[537 609] 2003], :left [[829 755] 1367]}
+borders neighbour pre {:top [[312 114] 3527], :right [[129 516] 2069], :bottom [[567 945] 3301], :left [[822 435] 1559]}
+(right) current id, transform list 3301 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[129 516] 2069], :right [[114 312] 3527], :bottom [[822 435] 1559], :left [[945 567] 3301]}
+borders neighbour pre {:top [[114 312] 2657], :right [[488 94] 1511], :bottom [[448 14] 2957], :left [[230 412] 1753]}
+(right) current id, transform list 2657 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[230 412] 1753], :right [[14 448] 2957], :bottom [[488 94] 1511], :left [[312 114] 2657]}
+borders neighbour pre {:top [[1012 191] 1307], :right [[106 344] 3541], :bottom [[14 448] 3527], :left [[325 650] 2887]}
+(right) current id, transform list 3527 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[106 344] 3541], :right [[191 1012] 1307], :bottom [[325 650] 2887], :left [[448 14] 3527]}
+borders neighbour pre {:top [[153 612] 1291], :right [[712 77] 1543], :bottom [[191 1012] 2957], :left [[978 303] 2029]}
+(right) current id, transform list 2957 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[712 77] 1543], :right [[612 153] 1291], :bottom [[978 303] 2029], :left [[1012 191] 2957]}
+borders neighbour pre {:top [[535 929] 2333], :right [[612 153] 1307], :bottom [[8 64] 2593], :left [[161 532] 2851]}
+(right) current id, transform list 1307 [[:flip :horizontal]]
+borders neighbour post {:top [[929 535] 2333], :right [[161 532] 2851], :bottom [[64 8] 2593], :left [[612 153] 1307]}
+borders neighbour pre {:top [[91 872] 2777], :right [[670 485] 2423], :bottom [[161 532] 1291], :left [[858 363] 2473]}
+(right) current id, transform list 1291 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[670 485] 2423], :right [[872 91] 2777], :bottom [[858 363] 2473], :left [[532 161] 1291]}
+borders neighbour pre {:top [[796 227] 1171], :right [[91 872] 2851], :bottom [[935 919] 1019], :left [[787 803] nil]}
+(right) current id, transform list 2851 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[919 935] 1019], :right [[803 787] nil], :bottom [[227 796] 1171], :left [[872 91] 2851]}
+current id, transform list 3557 []
+3557 [[340 170] 3739] 3739 [[170 340] 3557]
+1061 [[285 738] 2551] 2551 [[285 738] 1061]
+1913 [[625 569] 3061] 3061 [[625 569] 1913]
+3907 [[953 631] 1367] 1367 [[953 631] 3907]
+1427 [[931 791] nil] 3301 [[677 661] 1427]
+1559 [[642 261] nil] 2657 [[129 516] 2069]
+1511 [[94 488] 3527] 3527 [[230 412] 1753]
+2887 [[650 325] 2957] 2957 [[106 344] 3541]
+2029 [[978 303] 1307] 1307 [[712 77] 1543]
+2593 [[64 8] 1291] 1291 [[929 535] 2333]
+2423 [[653 709] nil] 2851 [[670 485] 2423]
+1019 [[919 935] 2777] 2777 [[919 935] 1019]
+new-row match false
+borders neighbour pre {:top [[387 774] 3119], :right [[1018 383] 2347], :bottom [[26 352] 2551], :left [[220 236] 2699]}
+(right) current id, transform list 2347 [[:flip :horizontal]]
+borders neighbour post {:top [[774 387] 3119], :right [[220 236] 2699], :bottom [[352 26] 2551], :left [[1018 383] 2347]}
+borders neighbour pre {:top [[173 724] 3049], :right [[720 45] 3061], :bottom [[220 236] 2843], :left [[494 478] 1181]}
+(right) current id, transform list 2843 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[720 45] 3061], :right [[724 173] 3049], :bottom [[494 478] 1181], :left [[236 220] 2843]}
+borders neighbour pre {:top [[760 125] 3761], :right [[173 724] 2699], :bottom [[529 545] 1367], :left [[597 681] 2003]}
+(right) current id, transform list 2699 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[545 529] 1367], :right [[681 597] 2003], :bottom [[125 760] 3761], :left [[724 173] 2699]}
+borders neighbour pre {:top [[71 904] 3163], :right [[681 597] 3049], :bottom [[609 537] 3301], :left [[894 507] 2069]}
+(right) current id, transform list 3049 [[:flip :horizontal]]
+borders neighbour post {:top [[904 71] 3163], :right [[894 507] 2069], :bottom [[537 609] 3301], :left [[681 597] 3049]}
+borders neighbour pre {:top [[894 507] 2003], :right [[389 646] 1487], :bottom [[776 67] 1753], :left [[129 516] 2657]}
+(right) current id, transform list 2003 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[129 516] 2657], :right [[67 776] 1753], :bottom [[389 646] 1487], :left [[507 894] 2003]}
+borders neighbour pre {:top [[79 968] 1483], :right [[776 67] 2069], :bottom [[412 230] 3527], :left [[224 28] 3541]}
+(right) current id, transform list 2069 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[230 412] 3527], :right [[28 224] 3541], :bottom [[968 79] 1483], :left [[67 776] 2069]}
+borders neighbour pre {:top [[28 224] 1753], :right [[344 106] 2957], :bottom [[428 214] 1543], :left [[406 422] 1283]}
+(right) current id, transform list 1753 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[406 422] 1283], :right [[214 428] 1543], :bottom [[344 106] 2957], :left [[224 28] 1753]}
+borders neighbour pre {:top [[714 333] 2333], :right [[338 298] 1973], :bottom [[214 428] 3541], :left [[77 712] 1307]}
+(right) current id, transform list 3541 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[338 298] 1973], :right [[333 714] 2333], :bottom [[77 712] 1307], :left [[428 214] 3541]}
+borders neighbour pre {:top [[714 333] 1543], :right [[89 616] 1657], :bottom [[1017 639] 2473], :left [[535 929] 1291]}
+(right) current id, transform list 1543 [[:rotate :left]]
+borders neighbour post {:top [[89 616] 1657], :right [[1017 639] 2473], :bottom [[535 929] 1291], :left [[714 333] 1543]}
+borders neighbour pre {:top [[363 858] 2851], :right [[639 1017] 2333], :bottom [[702 501] 3041], :left [[296 82] 1171]}
+(right) current id, transform list 2333 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[501 702] 3041], :right [[82 296] 1171], :bottom [[858 363] 2851], :left [[1017 639] 2333]}
+borders neighbour pre {:top [[938 343] 2297], :right [[296 82] 2473], :bottom [[227 796] 2777], :left [[773 643] nil]}
+(right) current id, transform list 2473 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[796 227] 2777], :right [[643 773] nil], :bottom [[343 938] 2297], :left [[82 296] 2473]}
+current id, transform list 3739 [[:flip :horizontal]]
+3739 [[474 366] 2347] 2347 [[366 474] 3739]
+2551 [[352 26] 2843] 2843 [[774 387] 3119]
+3061 [[720 45] 2699] 2699 [[720 45] 3061]
+1367 [[545 529] 3049] 3049 [[545 529] 1367]
+3301 [[537 609] 2003] 2003 [[904 71] 3163]
+2657 [[822 435] 1559] 2069 [[129 516] 2657]
+3527 [[488 94] 1511] 1753 [[230 412] 3527]
+2957 [[325 650] 2887] 3541 [[406 422] 1283]
+1307 [[978 303] 2029] 1543 [[338 298] 1973]
+1291 [[64 8] 2593] 2333 [[89 616] 1657]
+2851 [[858 363] 2473] 2473 [[501 702] 3041]
+2777 [[227 796] 1171] 1171 [[796 227] 2777]
+new-row match false
+borders neighbour pre {:top [[373 698] 3469], :right [[774 387] 2843], :bottom [[447 1014] 1181], :left [[928 23] 3121]}
+(right) current id, transform list 3469 [[:rotate :left]]
+borders neighbour post {:top [[774 387] 2843], :right [[447 1014] 1181], :bottom [[928 23] 3121], :left [[373 698] 3469]}
+borders neighbour pre {:top [[447 1014] 3119], :right [[744 93] 3517], :bottom [[408 102] 3761], :left [[478 494] 2699]}
+(right) current id, transform list 3119 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[478 494] 2699], :right [[102 408] 3761], :bottom [[744 93] 3517], :left [[1014 447] 3119]}
+borders neighbour pre {:top [[1001 607] 3163], :right [[604 233] 1949], :bottom [[408 102] 1181], :left [[125 760] 3049]}
+(right) current id, transform list 1181 [[:rotate :right]]
+borders neighbour post {:top [[125 760] 3049], :right [[1001 607] 3163], :bottom [[604 233] 1949], :left [[408 102] 1181]}
+borders neighbour pre {:top [[732 237] 1487], :right [[71 904] 2003], :bottom [[1001 607] 3761], :left [[707 781] 3169]}
+(right) current id, transform list 3761 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[71 904] 2003], :right [[237 732] 1487], :bottom [[707 781] 3169], :left [[607 1001] 3761]}
+borders neighbour pre {:top [[237 732] 3163], :right [[793 611] 3083], :bottom [[705 525] 1483], :left [[646 389] 2069]}
+(right) current id, transform list 3163 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[646 389] 2069], :right [[525 705] 1483], :bottom [[793 611] 3083], :left [[732 237] 3163]}
+borders neighbour pre {:top [[525 705] 1487], :right [[723 813] 1847], :bottom [[748 221] 1283], :left [[79 968] 1753]}
+(right) current id, transform list 1487 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[79 968] 1753], :right [[221 748] 1283], :bottom [[723 813] 1847], :left [[705 525] 1487]}
+borders neighbour pre {:top [[422 406] 3541], :right [[27 864] 1973], :bottom [[663 933] 1789], :left [[748 221] 1483]}
+(right) current id, transform list 1483 []
+borders neighbour post {:top [[422 406] 3541], :right [[27 864] 1973], :bottom [[663 933] 1789], :left [[748 221] 1483]}
+borders neighbour pre {:top [[27 864] 1283], :right [[644 133] 3109], :bottom [[140 196] 1657], :left [[338 298] 1543]}
+(right) current id, transform list 1283 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[338 298] 1543], :right [[196 140] 1657], :bottom [[644 133] 3109], :left [[864 27] 1283]}
+borders neighbour pre {:top [[140 196] 1973], :right [[89 616] 2333], :bottom [[991 1007] 3041], :left [[826 371] 2879]}
+(right) current id, transform list 1973 [[:rotate :left]]
+borders neighbour post {:top [[89 616] 2333], :right [[991 1007] 3041], :bottom [[826 371] 2879], :left [[140 196] 1973]}
+borders neighbour pre {:top [[232 92] 2297], :right [[401 550] 3821], :bottom [[1007 991] 1657], :left [[702 501] 2473]}
+(right) current id, transform list 1657 [[:rotate :right]]
+borders neighbour post {:top [[702 501] 2473], :right [[232 92] 2297], :bottom [[401 550] 3821], :left [[1007 991] 1657]}
+borders neighbour pre {:top [[938 343] 1171], :right [[232 92] 3041], :bottom [[262 386] 1163], :left [[337 554] nil]}
+(right) current id, transform list 3041 [[:flip :horizontal]]
+borders neighbour post {:top [[343 938] 1171], :right [[337 554] nil], :bottom [[386 262] 1163], :left [[232 92] 3041]}
+current id, transform list 2347 [[:rotate :right]]
+2347 [[940 215] 3469] 3469 [[215 940] 2347]
+2843 [[352 26] 2551] 3119 [[774 387] 2843]
+2699 [[494 478] 1181] 1181 [[478 494] 2699]
+3049 [[125 760] 3761] 3761 [[125 760] 3049]
+2003 [[537 609] 3301] 3163 [[71 904] 2003]
+2069 [[389 646] 1487] 1487 [[646 389] 2069]
+1753 [[968 79] 1483] 1483 [[79 968] 1753]
+3541 [[344 106] 2957] 1283 [[422 406] 3541]
+1543 [[77 712] 1307] 1973 [[338 298] 1543]
+2333 [[535 929] 1291] 1657 [[89 616] 2333]
+2473 [[858 363] 2851] 3041 [[702 501] 2473]
+1171 [[343 938] 2297] 2297 [[343 938] 1171]
+new-row match false
+borders neighbour pre {:top [[175 980] 2179], :right [[538 353] 1039], :bottom [[441 630] 3517], :left [[928 23] 3119]}
+(right) current id, transform list 2179 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[928 23] 3119], :right [[630 441] 3517], :bottom [[538 353] 1039], :left [[980 175] 2179]}
+borders neighbour pre {:top [[93 744] 1181], :right [[630 441] 3121], :bottom [[346 362] 2549], :left [[424 86] 1949]}
+(right) current id, transform list 3121 [[:flip :horizontal]]
+borders neighbour post {:top [[744 93] 1181], :right [[424 86] 1949], :bottom [[362 346] 2549], :left [[630 441] 3121]}
+borders neighbour pre {:top [[604 233] 3761], :right [[86 424] 3517], :bottom [[162 276] 1597], :left [[381 762] 3169]}
+(right) current id, transform list 3517 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[276 162] 1597], :right [[762 381] 3169], :bottom [[233 604] 3761], :left [[424 86] 3517]}
+borders neighbour pre {:top [[381 762] 1949], :right [[707 781] 3163], :bottom [[893 763] 3083], :left [[820 179] 2741]}
+(right) current id, transform list 1949 [[:rotate :left]]
+borders neighbour post {:top [[707 781] 3163], :right [[893 763] 3083], :bottom [[820 179] 2741], :left [[381 762] 1949]}
+borders neighbour pre {:top [[731 877] 1847], :right [[611 793] 1487], :bottom [[893 763] 3169], :left [[861 747] 2713]}
+(right) current id, transform list 3169 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[611 793] 1487], :right [[877 731] 1847], :bottom [[861 747] 2713], :left [[763 893] 3169]}
+borders neighbour pre {:top [[541 737] 3257], :right [[731 877] 3083], :bottom [[723 813] 1483], :left [[825 627] 1789]}
+(right) current id, transform list 3083 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[813 723] 1483], :right [[627 825] 1789], :bottom [[737 541] 3257], :left [[877 731] 3083]}
+borders neighbour pre {:top [[177 564] 3659], :right [[627 825] 1847], :bottom [[933 663] 1283], :left [[764 253] 3109]}
+(right) current id, transform list 1847 [[:flip :horizontal]]
+borders neighbour post {:top [[564 177] 3659], :right [[764 253] 3109], :bottom [[663 933] 1283], :left [[627 825] 1847]}
+borders neighbour pre {:top [[154 356] 2879], :right [[133 644] 1973], :bottom [[764 253] 1789], :left [[332 202] 1901]}
+(right) current id, transform list 1789 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[133 644] 1973], :right [[356 154] 2879], :bottom [[332 202] 1901], :left [[253 764] 1789]}
+borders neighbour pre {:top [[371 826] 1657], :right [[970 335] 3821], :bottom [[418 278] 1723], :left [[154 356] 3109]}
+(right) current id, transform list 3109 []
+borders neighbour post {:top [[371 826] 1657], :right [[970 335] 3821], :bottom [[418 278] 1723], :left [[154 356] 3109]}
+borders neighbour pre {:top [[550 401] 3041], :right [[40 80] 1163], :bottom [[172 212] 1579], :left [[335 970] 2879]}
+(right) current id, transform list 2879 []
+borders neighbour post {:top [[550 401] 3041], :right [[40 80] 1163], :bottom [[172 212] 1579], :left [[335 970] 2879]}
+borders neighbour pre {:top [[262 386] 2297], :right [[269 706] nil], :bottom [[798 483] 3181], :left [[80 40] 3821]}
+(right) current id, transform list 3821 []
+borders neighbour post {:top [[262 386] 2297], :right [[269 706] nil], :bottom [[798 483] 3181], :left [[80 40] 3821]}
+current id, transform list 3469 [[:rotate :right]]
+3469 [[88 104] 2179] 2179 [[104 88] 3469]
+3119 [[928 23] 3121] 3121 [[928 23] 3119]
+1181 [[744 93] 3517] 3517 [[744 93] 1181]
+3761 [[604 233] 1949] 1949 [[276 162] 1597]
+3163 [[707 781] 3169] 3169 [[707 781] 3163]
+1487 [[793 611] 3083] 3083 [[611 793] 1487]
+1483 [[723 813] 1847] 1847 [[813 723] 1483]
+1283 [[663 933] 1789] 1789 [[564 177] 3659]
+1973 [[644 133] 3109] 3109 [[133 644] 1973]
+1657 [[826 371] 2879] 2879 [[371 826] 1657]
+3041 [[401 550] 3821] 3821 [[550 401] 3041]
+2297 [[386 262] 1163] 1163 [[262 386] 2297]
+new-row match false
+borders neighbour pre {:top [[615 921] 1213], :right [[735 1005] 1933], :bottom [[538 353] 3121], :left [[497 574] 2549]}
+(right) current id, transform list 1933 [[:flip :horizontal]]
+borders neighbour post {:top [[921 615] 1213], :right [[497 574] 2549], :bottom [[353 538] 3121], :left [[735 1005] 1933]}
+borders neighbour pre {:top [[201 588] 1889], :right [[574 497] 1039], :bottom [[346 362] 3517], :left [[282 354] 1597]}
+(right) current id, transform list 1039 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[362 346] 3517], :right [[354 282] 1597], :bottom [[588 201] 1889], :left [[497 574] 1039]}
+borders neighbour pre {:top [[276 162] 1949], :right [[282 354] 2549], :bottom [[159 996] 3767], :left [[998 415] 2741]}
+(right) current id, transform list 2549 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[996 159] 3767], :right [[415 998] 2741], :bottom [[162 276] 1949], :left [[354 282] 2549]}
+borders neighbour pre {:top [[998 415] 1597], :right [[179 820] 3169], :bottom [[824 115] 2713], :left [[165 660] 1621]}
+(right) current id, transform list 1597 [[:rotate :left]]
+borders neighbour post {:top [[179 820] 3169], :right [[824 115] 2713], :bottom [[165 660] 1621], :left [[998 415] 1597]}
+borders neighbour pre {:top [[824 115] 2741], :right [[392 70] 1693], :bottom [[459 846] 3257], :left [[747 861] 3083]}
+(right) current id, transform list 2741 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[747 861] 3083], :right [[846 459] 3257], :bottom [[392 70] 1693], :left [[115 824] 2741]}
+borders neighbour pre {:top [[846 459] 2713], :right [[101 664] 3643], :bottom [[971 847] 3659], :left [[541 737] 1847]}
+(right) current id, transform list 2713 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[541 737] 1847], :right [[847 971] 3659], :bottom [[101 664] 3643], :left [[459 846] 2713]}
+borders neighbour pre {:top [[847 971] 3257], :right [[823 947] 1289], :bottom [[790 419] 1901], :left [[177 564] 1789]}
+(right) current id, transform list 3257 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[177 564] 1789], :right [[419 790] 1901], :bottom [[823 947] 1289], :left [[971 847] 3257]}
+borders neighbour pre {:top [[809 595] 3637], :right [[790 419] 3659], :bottom [[332 202] 3109], :left [[311 946] 1723]}
+(right) current id, transform list 3659 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[202 332] 3109], :right [[946 311] 1723], :bottom [[595 809] 3637], :left [[419 790] 3659]}
+borders neighbour pre {:top [[311 946] 1901], :right [[675 789] 2143], :bottom [[914 295] 1579], :left [[418 278] 2879]}
+(right) current id, transform list 1901 [[:rotate :left]]
+borders neighbour post {:top [[675 789] 2143], :right [[914 295] 1579], :bottom [[418 278] 2879], :left [[311 946] 1901]}
+borders neighbour pre {:top [[914 295] 1723], :right [[212 172] 3821], :bottom [[190 500] 3181], :left [[211 812] 3037]}
+(right) current id, transform list 1723 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[211 812] 3037], :right [[500 190] 3181], :bottom [[212 172] 3821], :left [[295 914] 1723]}
+borders neighbour pre {:top [[798 483] 1163], :right [[190 500] 1579], :bottom [[437 694] 2539], :left [[913 551] nil]}
+(right) current id, transform list 1579 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[694 437] 2539], :right [[551 913] nil], :bottom [[483 798] 1163], :left [[500 190] 1579]}
+current id, transform list 2179 [[:rotate :left] [:flip :horizontal]]
+2179 [[657 549] 1933] 1933 [[549 657] 2179]
+3121 [[538 353] 1039] 1039 [[921 615] 1213]
+3517 [[362 346] 2549] 2549 [[362 346] 3517]
+1949 [[233 604] 3761] 1597 [[996 159] 3767]
+3169 [[820 179] 2741] 2741 [[179 820] 3169]
+3083 [[861 747] 2713] 2713 [[747 861] 3083]
+1847 [[737 541] 3257] 3257 [[541 737] 1847]
+1789 [[663 933] 1283] 3659 [[177 564] 1789]
+3109 [[332 202] 1901] 1901 [[202 332] 3109]
+2879 [[418 278] 1723] 1723 [[675 789] 2143]
+3821 [[172 212] 1579] 1579 [[211 812] 3037]
+1163 [[798 483] 3181] 3181 [[694 437] 2539]
+new-row match false
+borders neighbour pre {:top [[617 601] 1499], :right [[833 523] 3677], :bottom [[921 615] 1039], :left [[863 1003] 1889]}
+(right) current id, transform list 3677 [[:flip :horizontal]]
+borders neighbour post {:top [[601 617] 1499], :right [[863 1003] 1889], :bottom [[615 921] 1039], :left [[833 523] 3677]}
+borders neighbour pre {:top [[272 34] 3767], :right [[395 838] 1009], :bottom [[1003 863] 1213], :left [[588 201] 2549]}
+(right) current id, transform list 1213 [[:rotate :right]]
+borders neighbour post {:top [[588 201] 2549], :right [[272 34] 3767], :bottom [[395 838] 1009], :left [[1003 863] 1213]}
+borders neighbour pre {:top [[405 678] 1621], :right [[996 159] 1597], :bottom [[272 34] 1889], :left [[240 60] 2617]}
+(right) current id, transform list 1889 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[996 159] 1597], :right [[678 405] 1621], :bottom [[240 60] 2617], :left [[34 272] 1889]}
+borders neighbour pre {:top [[416 22] 1693], :right [[42 336] 2801], :bottom [[405 678] 3767], :left [[660 165] 2741]}
+(right) current id, transform list 3767 [[:rotate :right]]
+borders neighbour post {:top [[660 165] 2741], :right [[416 22] 1693], :bottom [[42 336] 2801], :left [[405 678] 3767]}
+borders neighbour pre {:top [[70 392] 2713], :right [[416 22] 1621], :bottom [[404 166] 2693], :left [[152 100] 3643]}
+(right) current id, transform list 1621 [[:flip :horizontal]]
+borders neighbour post {:top [[392 70] 2713], :right [[152 100] 3643], :bottom [[166 404] 2693], :left [[416 22] 1621]}
+borders neighbour pre {:top [[101 664] 3257], :right [[852 171] 1289], :bottom [[44 208] 3671], :left [[152 100] 1693]}
+(right) current id, transform list 1693 [[:flip :vertical]]
+borders neighbour post {:top [[44 208] 3671], :right [[171 852] 1289], :bottom [[101 664] 3257], :left [[100 152] 1693]}
+borders neighbour pre {:top [[860 235] 3637], :right [[128 4] 2083], :bottom [[171 852] 3643], :left [[823 947] 3659]}
+(right) current id, transform list 3643 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[128 4] 2083], :right [[235 860] 3637], :bottom [[823 947] 3659], :left [[852 171] 3643]}
+borders neighbour pre {:top [[235 860] 1289], :right [[595 809] 1901], :bottom [[587 841] 2143], :left [[856 107] 3989]}
+(right) current id, transform list 1289 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[856 107] 3989], :right [[841 587] 2143], :bottom [[595 809] 1901], :left [[860 235] 1289]}
+borders neighbour pre {:top [[291 786] 3797], :right [[841 587] 3637], :bottom [[675 789] 1723], :left [[1000 95] 3037]}
+(right) current id, transform list 3637 [[:flip :horizontal]]
+borders neighbour post {:top [[786 291] 3797], :right [[1000 95] 3037], :bottom [[789 675] 1723], :left [[841 587] 3637]}
+borders neighbour pre {:top [[348 234] 2539], :right [[211 812] 1579], :bottom [[1000 95] 2143], :left [[384 6] 1049]}
+(right) current id, transform list 2143 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[211 812] 1579], :right [[234 348] 2539], :bottom [[384 6] 1049], :left [[95 1000] 2143]}
+borders neighbour pre {:top [[694 437] 3181], :right [[234 348] 3037], :bottom [[484 158] 2647], :left [[207 972] nil]}
+(right) current id, transform list 3037 [[:flip :horizontal]]
+borders neighbour post {:top [[437 694] 3181], :right [[207 972] nil], :bottom [[158 484] 2647], :left [[234 348] 3037]}
+current id, transform list 1933 [[:flip :vertical] [:flip :horizontal]]
+1933 [[912 39] 3677] 3677 [[912 39] 1933]
+1039 [[353 538] 3121] 1213 [[601 617] 1499]
+2549 [[588 201] 1889] 1889 [[588 201] 2549]
+1597 [[162 276] 1949] 3767 [[996 159] 1597]
+2741 [[165 660] 1621] 1621 [[660 165] 2741]
+2713 [[392 70] 1693] 1693 [[392 70] 2713]
+3257 [[101 664] 3643] 3643 [[44 208] 3671]
+3659 [[823 947] 1289] 1289 [[128 4] 2083]
+1901 [[595 809] 3637] 3637 [[856 107] 3989]
+1723 [[418 278] 2879] 2143 [[786 291] 3797]
+1579 [[212 172] 3821] 3037 [[211 812] 1579]
+3181 [[483 798] 1163] 2539 [[437 694] 3181]
+new-row match false
+borders neighbour pre {:top [[695 949] 1009], :right [[831 1011] 1783], :bottom [[917 679] 1741], :left [[601 617] 1213]}
+(right) current id, transform list 1741 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[831 1011] 1783], :right [[949 695] 1009], :bottom [[601 617] 1213], :left [[679 917] 1741]}
+borders neighbour pre {:top [[838 395] 1889], :right [[219 876] 2617], :bottom [[703 1013] 3673], :left [[949 695] 1499]}
+(right) current id, transform list 1499 [[:flip :vertical]]
+borders neighbour post {:top [[703 1013] 3673], :right [[876 219] 2617], :bottom [[838 395] 1889], :left [[695 949] 1499]}
+borders neighbour pre {:top [[240 60] 3767], :right [[358 410] 2801], :bottom [[467 814] 3407], :left [[876 219] 1009]}
+(right) current id, transform list 1009 [[:flip :vertical]]
+borders neighbour post {:top [[467 814] 3407], :right [[410 358] 2801], :bottom [[240 60] 3767], :left [[219 876] 1009]}
+borders neighbour pre {:top [[336 42] 1621], :right [[490 350] 2693], :bottom [[160 20] 2441], :left [[410 358] 2617]}
+(right) current id, transform list 2617 [[:flip :vertical]]
+borders neighbour post {:top [[160 20] 2441], :right [[350 490] 2693], :bottom [[336 42] 1621], :left [[358 410] 2617]}
+borders neighbour pre {:top [[294 402] 3671], :right [[166 404] 1693], :bottom [[490 350] 2801], :left [[194 268] 2087]}
+(right) current id, transform list 2801 [[:rotate :right]]
+borders neighbour post {:top [[194 268] 2087], :right [[294 402] 3671], :bottom [[166 404] 1693], :left [[490 350] 2801]}
+borders neighbour pre {:top [[44 208] 3643], :right [[402 294] 2693], :bottom [[150 420] 3697], :left [[124 248] 2083]}
+(right) current id, transform list 2693 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[420 150] 3697], :right [[248 124] 2083], :bottom [[208 44] 3643], :left [[294 402] 2693]}
+borders neighbour pre {:top [[508 254] 3989], :right [[56 112] 2557], :bottom [[124 248] 3671], :left [[4 128] 1289]}
+(right) current id, transform list 3671 [[:rotate :right]]
+borders neighbour post {:top [[4 128] 1289], :right [[508 254] 3989], :bottom [[56 112] 2557], :left [[124 248] 3671]}
+borders neighbour pre {:top [[839 907] 3797], :right [[856 107] 3637], :bottom [[508 254] 2083], :left [[189 756] 1867]}
+(right) current id, transform list 2083 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[856 107] 3637], :right [[907 839] 3797], :bottom [[189 756] 1867], :left [[254 508] 2083]}
+borders neighbour pre {:top [[839 907] 3989], :right [[786 291] 2143], :bottom [[199 908] 1049], :left [[689 565] 1381]}
+(right) current id, transform list 3989 [[:rotate :left]]
+borders neighbour post {:top [[786 291] 2143], :right [[199 908] 1049], :bottom [[689 565] 1381], :left [[839 907] 3989]}
+borders neighbour pre {:top [[199 908] 3797], :right [[981 687] 1997], :bottom [[782 451] 2647], :left [[6 384] 3037]}
+(right) current id, transform list 3797 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[6 384] 3037], :right [[451 782] 2647], :bottom [[981 687] 1997], :left [[908 199] 3797]}
+borders neighbour pre {:top [[158 484] 2539], :right [[451 782] 1049], :bottom [[950 439] 1663], :left [[74 328] nil]}
+(right) current id, transform list 1049 [[:flip :horizontal]]
+borders neighbour post {:top [[484 158] 2539], :right [[74 328] nil], :bottom [[439 950] 1663], :left [[451 782] 1049]}
+current id, transform list 3677 [[:rotate :right]]
+3677 [[883 827] 1741] 1741 [[883 827] 3677]
+1213 [[615 921] 1039] 1499 [[831 1011] 1783]
+1889 [[395 838] 1009] 1009 [[703 1013] 3673]
+3767 [[240 60] 2617] 2617 [[467 814] 3407]
+1621 [[42 336] 2801] 2801 [[160 20] 2441]
+1693 [[166 404] 2693] 2693 [[194 268] 2087]
+3643 [[101 664] 3257] 3671 [[420 150] 3697]
+1289 [[823 947] 3659] 2083 [[4 128] 1289]
+3637 [[595 809] 1901] 3989 [[856 107] 3637]
+2143 [[789 675] 1723] 3797 [[786 291] 2143]
+3037 [[384 6] 1049] 1049 [[6 384] 3037]
+2539 [[158 484] 2647] 2647 [[484 158] 2539]
+new-row match false
+borders neighbour pre {:top [[902 391] 3613], :right [[286 482] 2017], :bottom [[7 896] 3673], :left [[831 1011] 1499]}
+(right) current id, transform list 3613 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[831 1011] 1499], :right [[896 7] 3673], :bottom [[286 482] 2017], :left [[391 902] 3613]}
+borders neighbour pre {:top [[1013 703] 1009], :right [[966 399] 3407], :bottom [[360 90] 3331], :left [[7 896] 1783]}
+(right) current id, transform list 1783 []
+borders neighbour post {:top [[1013 703] 1009], :right [[966 399] 3407], :bottom [[360 90] 3331], :left [[7 896] 1783]}
+borders neighbour pre {:top [[304 50] 2803], :right [[399 966] 3673], :bottom [[814 467] 2617], :left [[398 454] 2441]}
+(right) current id, transform list 3673 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[467 814] 2617], :right [[454 398] 2441], :bottom [[50 304] 2803], :left [[966 399] 3673]}
+borders neighbour pre {:top [[566 433] 2087], :right [[160 20] 2801], :bottom [[398 454] 3407], :left [[99 792] 2927]}
+(right) current id, transform list 3407 [[:rotate :right]]
+borders neighbour post {:top [[99 792] 2927], :right [[566 433] 2087], :bottom [[160 20] 2801], :left [[398 454] 3407]}
+borders neighbour pre {:top [[194 268] 2693], :right [[382 506] 3697], :bottom [[403 806] 1493], :left [[566 433] 2441]}
+(right) current id, transform list 2441 [[:flip :vertical]]
+borders neighbour post {:top [[403 806] 1493], :right [[506 382] 3697], :bottom [[194 268] 2693], :left [[433 566] 2441]}
+borders neighbour pre {:top [[394 326] 2557], :right [[420 150] 3671], :bottom [[382 506] 2087], :left [[300 210] 3079]}
+(right) current id, transform list 2087 [[:rotate :right]]
+borders neighbour post {:top [[300 210] 3079], :right [[394 326] 2557], :bottom [[420 150] 3671], :left [[382 506] 2087]}
+borders neighbour pre {:top [[394 326] 3697], :right [[112 56] 2083], :bottom [[425 598] 1867], :left [[718 461] 2477]}
+(right) current id, transform list 3697 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[718 461] 2477], :right [[598 425] 1867], :bottom [[112 56] 2083], :left [[326 394] 3697]}
+borders neighbour pre {:top [[944 55] 1381], :right [[455 910] 1811], :bottom [[598 425] 2557], :left [[189 756] 3989]}
+(right) current id, transform list 2557 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[455 910] 1811], :right [[55 944] 1381], :bottom [[189 756] 3989], :left [[425 598] 2557]}
+borders neighbour pre {:top [[55 944] 1867], :right [[565 689] 3797], :bottom [[577 521] 1997], :left [[770 259] 1567]}
+(right) current id, transform list 1867 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[770 259] 1567], :right [[521 577] 1997], :bottom [[565 689] 3797], :left [[944 55] 1867]}
+borders neighbour pre {:top [[865 539] 1663], :right [[817 563] 3299], :bottom [[521 577] 1381], :left [[981 687] 1049]}
+(right) current id, transform list 1381 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[817 563] 3299], :right [[539 865] 1663], :bottom [[981 687] 1049], :left [[577 521] 1381]}
+borders neighbour pre {:top [[950 439] 2647], :right [[113 568] nil], :bottom [[983 943] 1553], :left [[539 865] 1997]}
+(right) current id, transform list 1997 [[:flip :vertical]]
+borders neighbour post {:top [[983 943] 1553], :right [[568 113] nil], :bottom [[950 439] 2647], :left [[865 539] 1997]}
+current id, transform list 1741 [[:rotate :left]]
+1741 [[840 75] 3613] 3613 [[75 840] 1741]
+1499 [[601 617] 1213] 1783 [[831 1011] 1499]
+1009 [[838 395] 1889] 3673 [[1013 703] 1009]
+2617 [[240 60] 3767] 3407 [[467 814] 2617]
+2801 [[336 42] 1621] 2441 [[99 792] 2927]
+2693 [[166 404] 1693] 2087 [[403 806] 1493]
+3671 [[208 44] 3643] 3697 [[300 210] 3079]
+2083 [[56 112] 2557] 2557 [[718 461] 2477]
+3989 [[189 756] 1867] 1867 [[455 910] 1811]
+3797 [[689 565] 1381] 1381 [[770 259] 1567]
+1049 [[981 687] 1997] 1997 [[817 563] 3299]
+2647 [[439 950] 1663] 1663 [[983 943] 1553]
+new-row match false
+borders neighbour pre {:top [[450 270] 3331], :right [[52 176] 1861], :bottom [[110 472] 2389], :left [[286 482] 1783]}
+(right) current id, transform list 2389 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[52 176] 1861], :right [[270 450] 3331], :bottom [[286 482] 1783], :left [[472 110] 2389]}
+borders neighbour pre {:top [[270 450] 2017], :right [[90 360] 3673], :bottom [[426 342] 2803], :left [[58 368] 1987]}
+(right) current id, transform list 2017 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[58 368] 1987], :right [[342 426] 2803], :bottom [[90 360] 3673], :left [[450 270] 2017]}
+borders neighbour pre {:top [[304 50] 3407], :right [[426 342] 3331], :bottom [[458 334] 2683], :left [[440 118] 2927]}
+(right) current id, transform list 3331 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[334 458] 2683], :right [[118 440] 2927], :bottom [[50 304] 3407], :left [[342 426] 3331]}
+borders neighbour pre {:top [[118 440] 2803], :right [[314 370] 2399], :bottom [[365 730] 1493], :left [[792 99] 2441]}
+(right) current id, transform list 2803 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[792 99] 2441], :right [[730 365] 1493], :bottom [[314 370] 2399], :left [[440 118] 2803]}
+borders neighbour pre {:top [[880 59] 1583], :right [[365 730] 2927], :bottom [[806 403] 2087], :left [[487 926] 3079]}
+(right) current id, transform list 2927 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[403 806] 2087], :right [[926 487] 3079], :bottom [[59 880] 1583], :left [[730 365] 2927]}
+borders neighbour pre {:top [[487 926] 1493], :right [[692 181] 1733], :bottom [[200 76] 2477], :left [[210 300] 3697]}
+(right) current id, transform list 1493 [[:rotate :left]]
+borders neighbour post {:top [[692 181] 1733], :right [[200 76] 2477], :bottom [[210 300] 3697], :left [[487 926] 1493]}
+borders neighbour pre {:top [[76 200] 3079], :right [[476 238] 2663], :bottom [[317 754] 1811], :left [[718 461] 2557]}
+(right) current id, transform list 3079 [[:rotate :left]]
+borders neighbour post {:top [[476 238] 2663], :right [[317 754] 1811], :bottom [[718 461] 2557], :left [[76 200] 3079]}
+borders neighbour pre {:top [[910 455] 1867], :right [[83 808] 1567], :bottom [[1016 127] 1447], :left [[317 754] 2477]}
+(right) current id, transform list 2477 [[:flip :vertical]]
+borders neighbour post {:top [[1016 127] 1447], :right [[808 83] 1567], :bottom [[910 455] 1867], :left [[754 317] 2477]}
+borders neighbour pre {:top [[862 491] 3299], :right [[229 668] 1223], :bottom [[808 83] 1811], :left [[259 770] 1381]}
+(right) current id, transform list 1811 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[229 668] 1223], :right [[491 862] 3299], :bottom [[259 770] 1381], :left [[83 808] 1811]}
+borders neighbour pre {:top [[817 563] 1997], :right [[862 491] 1567], :bottom [[111 984] 2749], :left [[999 927] 1553]}
+(right) current id, transform list 1567 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[984 111] 2749], :right [[927 999] 1553], :bottom [[563 817] 1997], :left [[491 862] 1567]}
+borders neighbour pre {:top [[983 943] 1663], :right [[927 999] 3299], :bottom [[849 555] 3089], :left [[683 853] nil]}
+(right) current id, transform list 3299 [[:flip :horizontal]]
+borders neighbour post {:top [[943 983] 1663], :right [[683 853] nil], :bottom [[555 849] 3089], :left [[927 999] 3299]}
+current id, transform list 3613 [[:rotate :left] [:flip :horizontal]]
+3613 [[430 470] 2389] 2389 [[470 430] 3613]
+1783 [[286 482] 2017] 2017 [[52 176] 1861]
+3673 [[360 90] 3331] 3331 [[58 368] 1987]
+3407 [[50 304] 2803] 2803 [[334 458] 2683]
+2441 [[160 20] 2801] 2927 [[792 99] 2441]
+2087 [[194 268] 2693] 1493 [[403 806] 2087]
+3697 [[420 150] 3671] 3079 [[692 181] 1733]
+2557 [[112 56] 2083] 2477 [[476 238] 2663]
+1867 [[189 756] 3989] 1811 [[1016 127] 1447]
+1381 [[565 689] 3797] 1567 [[229 668] 1223]
+1997 [[981 687] 1049] 3299 [[984 111] 2749]
+1663 [[950 439] 2647] 1553 [[943 983] 1663]
+new-row match false
+borders neighbour pre {:top [[878 475] 3691], :right [[176 52] 2017], :bottom [[144 36] 1987], :left [[33 528] 3923]}
+(right) current id, transform list 3691 [[:rotate :left]]
+borders neighbour post {:top [[176 52] 2017], :right [[144 36] 1987], :bottom [[33 528] 3923], :left [[878 475] 3691]}
+borders neighbour pre {:top [[368 58] 3331], :right [[452 142] 2683], :bottom [[364 218] 2999], :left [[36 144] 1861]}
+(right) current id, transform list 1861 []
+borders neighbour post {:top [[368 58] 3331], :right [[452 142] 2683], :bottom [[364 218] 2999], :left [[36 144] 1861]}
+borders neighbour pre {:top [[480 30] 2399], :right [[324 138] 2797], :bottom [[142 452] 1987], :left [[458 334] 2803]}
+(right) current id, transform list 1987 [[:rotate :right]]
+borders neighbour post {:top [[458 334] 2803], :right [[480 30] 2399], :bottom [[324 138] 2797], :left [[142 452] 1987]}
+borders neighbour pre {:top [[30 480] 2683], :right [[314 370] 2927], :bottom [[400 38] 1583], :left [[374 442] 1409]}
+(right) current id, transform list 2683 [[:rotate :left]]
+borders neighbour post {:top [[314 370] 2927], :right [[400 38] 1583], :bottom [[374 442] 1409], :left [[30 480] 2683]}
+borders neighbour pre {:top [[156 228] 3359], :right [[38 400] 2399], :bottom [[59 880] 1493], :left [[614 409] 1733]}
+(right) current id, transform list 2399 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[880 59] 1493], :right [[409 614] 1733], :bottom [[228 156] 3359], :left [[400 38] 2399]}
+borders neighbour pre {:top [[2 256] 2663], :right [[98 280] 1327], :bottom [[409 614] 1583], :left [[692 181] 3079]}
+(right) current id, transform list 1583 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[98 280] 1327], :right [[256 2] 2663], :bottom [[692 181] 3079], :left [[614 409] 1583]}
+borders neighbour pre {:top [[238 476] 2477], :right [[2 256] 1733], :bottom [[421 662] 2309], :left [[898 263] 1447]}
+(right) current id, transform list 1733 [[:flip :horizontal] [:flip :vertical]]
+borders neighbour post {:top [[662 421] 2309], :right [[263 898] 1447], :bottom [[476 238] 2477], :left [[256 2] 1733]}
+borders neighbour pre {:top [[127 1016] 1811], :right [[932 151] 1223], :bottom [[321 522] 3361], :left [[898 263] 2663]}
+(right) current id, transform list 2663 []
+borders neighbour post {:top [[127 1016] 1811], :right [[932 151] 1223], :bottom [[321 522] 3361], :left [[898 263] 2663]}
+borders neighbour pre {:top [[266 322] 2749], :right [[229 668] 1567], :bottom [[932 151] 1447], :left [[320 10] 2917]}
+(right) current id, transform list 1447 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[229 668] 1567], :right [[322 266] 2749], :bottom [[320 10] 2917], :left [[151 932] 1447]}
+borders neighbour pre {:top [[111 984] 3299], :right [[652 197] 3089], :bottom [[32 16] 1823], :left [[266 322] 1223]}
+(right) current id, transform list 1223 []
+borders neighbour post {:top [[111 984] 3299], :right [[652 197] 3089], :bottom [[32 16] 1823], :left [[266 322] 1223]}
+borders neighbour pre {:top [[331 842] nil], :right [[555 849] 1553], :bottom [[652 197] 2749], :left [[198 396] 3769]}
+(right) current id, transform list 2749 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[555 849] 1553], :right [[842 331] nil], :bottom [[198 396] 3769], :left [[197 652] 2749]}
+current id, transform list 2389 [[:rotate :left]]
+2389 [[393 582] 3691] 3691 [[582 393] 2389]
+2017 [[286 482] 1783] 1861 [[176 52] 2017]
+3331 [[90 360] 3673] 1987 [[368 58] 3331]
+2803 [[50 304] 3407] 2683 [[458 334] 2803]
+2927 [[314 370] 2399] 2399 [[314 370] 2927]
+1493 [[59 880] 1583] 1583 [[880 59] 1493]
+3079 [[210 300] 3697] 1733 [[98 280] 1327]
+2477 [[718 461] 2557] 2663 [[662 421] 2309]
+1811 [[910 455] 1867] 1447 [[127 1016] 1811]
+1567 [[259 770] 1381] 1223 [[229 668] 1567]
+3299 [[563 817] 1997] 2749 [[111 984] 3299]
+1553 [[555 849] 3089] 3089 [[555 849] 1553]
+new-row match false
+borders neighbour pre {:top [[599 937] nil], :right [[593 553] 1097], :bottom [[528 33] 1861], :left [[135 900] 2999]}
+(right) current id, transform list 1097 [[:flip :horizontal]]
+borders neighbour post {:top [[937 599] nil], :right [[135 900] 2999], :bottom [[33 528] 1861], :left [[593 553] 1097]}
+borders neighbour pre {:top [[982 431] 2797], :right [[364 218] 1987], :bottom [[135 900] 3923], :left [[729 621] nil]}
+(right) current id, transform list 3923 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[364 218] 1987], :right [[431 982] 2797], :bottom [[729 621] nil], :left [[900 135] 3923]}
+borders neighbour pre {:top [[468 174] 1409], :right [[324 138] 2683], :bottom [[431 982] 2999], :left [[526 449] nil]}
+(right) current id, transform list 2999 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[324 138] 2683], :right [[174 468] 1409], :bottom [[526 449] nil], :left [[982 431] 2999]}
+borders neighbour pre {:top [[468 174] 2797], :right [[442 374] 2399], :bottom [[73 584] 3359], :left [[608 25] nil]}
+(right) current id, transform list 2797 [[:rotate :left]]
+borders neighbour post {:top [[442 374] 2399], :right [[73 584] 3359], :bottom [[608 25] nil], :left [[468 174] 2797]}
+borders neighbour pre {:top [[584 73] 1409], :right [[228 156] 1583], :bottom [[184 116] 1327], :left [[57 624] nil]}
+(right) current id, transform list 1409 [[:rotate :left]]
+borders neighbour post {:top [[228 156] 1583], :right [[184 116] 1327], :bottom [[57 624] nil], :left [[584 73] 1409]}
+borders neighbour pre {:top [[184 116] 3359], :right [[345 618] nil], :bottom [[656 37] 2309], :left [[98 280] 1733]}
+(right) current id, transform list 3359 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[98 280] 1733], :right [[37 656] 2309], :bottom [[345 618] nil], :left [[116 184] 3359]}
+borders neighbour pre {:top [[897 519] 3361], :right [[749 733] nil], :bottom [[656 37] 1327], :left [[421 662] 2663]}
+(right) current id, transform list 1327 [[:rotate :right]]
+borders neighbour post {:top [[421 662] 2663], :right [[897 519] 3361], :bottom [[749 733] nil], :left [[656 37] 1327]}
+borders neighbour pre {:top [[519 897] 2309], :right [[522 321] 1447], :bottom [[414 486] 2917], :left [[35 784] nil]}
+(right) current id, transform list 2309 [[:rotate :left]]
+borders neighbour post {:top [[522 321] 1447], :right [[414 486] 2917], :bottom [[35 784] nil], :left [[519 897] 2309]}
+borders neighbour pre {:top [[193 524] 1823], :right [[930 279] nil], :bottom [[486 414] 3361], :left [[320 10] 1223]}
+(right) current id, transform list 3361 [[:rotate :right]]
+borders neighbour post {:top [[320 10] 1223], :right [[193 524] 1823], :bottom [[930 279] nil], :left [[486 414] 3361]}
+borders neighbour pre {:top [[193 524] 2917], :right [[751 989] nil], :bottom [[592 41] 3769], :left [[32 16] 2749]}
+(right) current id, transform list 2917 [[:rotate :left] [:flip :vertical]]
+borders neighbour post {:top [[32 16] 2749], :right [[41 592] 3769], :bottom [[751 989] nil], :left [[524 193] 2917]}
+borders neighbour pre {:top [[244 188] nil], :right [[396 198] 3089], :bottom [[41 592] 1823], :left [[974 463] nil]}
+(right) current id, transform list 1823 [[:rotate :right] [:flip :vertical]]
+borders neighbour post {:top [[396 198] 3089], :right [[188 244] nil], :bottom [[974 463] nil], :left [[592 41] 1823]}
+current id, transform list 3691 [[:rotate :left] [:flip :horizontal]]
+3691 [[766 509] 1097] 1097 [[509 766] 3691]
+1861 [[33 528] 3923] 3923 [[937 599] nil]
+1987 [[364 218] 2999] 2999 [[364 218] 1987]
+2683 [[324 138] 2797] 2797 [[324 138] 2683]
+2399 [[374 442] 1409] 1409 [[442 374] 2399]
+1583 [[228 156] 3359] 3359 [[228 156] 1583]
+1733 [[692 181] 3079] 1327 [[98 280] 1733]
+2663 [[476 238] 2477] 2309 [[421 662] 2663]
+1447 [[321 522] 3361] 3361 [[522 321] 1447]
+1223 [[320 10] 2917] 2917 [[320 10] 1223]
+2749 [[32 16] 1823] 1823 [[32 16] 2749]
+3089 [[198 396] 3769] 3769 [[396 198] 3089]
+new-row match false
+2371
